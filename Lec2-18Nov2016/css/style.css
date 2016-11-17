@@ -118,9 +118,9 @@ asq-sqlite-q{min-height: 650px; }
   width: 20%;
   background-color: grey;
   position: relative;
-  text-align: center;
+  text-align: left;
   left: 20px;
-  height: 20%;
+  height: 25%;
 }
 .box2{
   border: 1px solid black;
