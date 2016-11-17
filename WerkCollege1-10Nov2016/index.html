@@ -1,0 +1,1175 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>WerkCollege JS - ASQ</title>
+
+  <meta name="description" content="Werkcollege on JavaScript" />
+  <meta name="author" content="Max von Bülow, Vasileios Triglianos" />
+
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
+  <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+  <!-- Use shadow dom -->
+  <script>
+    window.Polymer = window.Polymer || {};
+    window.Polymer.dom = 'shadow';
+  </script>
+
+  <link rel="import" href="bower_components/polymer/polymer.html"> 
+
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+  <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+
+  <link href="bower_components/usi-web-atelier-slides-common/css/sunburst.css" rel="stylesheet">
+
+  <link rel="import" href="shared-styles.html">
+  <style is="custom-style" include="shared-styles"></style>
+  
+</head>
+
+<body class="impress-not-supported" data-asq-role="viewer">
+
+  <asq-canvas></asq-canvas>
+
+  <div class="fallback-message">
+    <p>
+      Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+    </p>
+    <p>
+      For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+    </p>
+  </div>
+
+  <asq-settings max-num-submissions="-1" slideflow="ctrl" assessment="none"></asq-settings>
+
+
+  <div id="impress">
+
+    <div id="splash" class="step" data-x="0" data-y="0" data-scale="0.4" data-rotate="0">
+      <h1>JavaScript exercises</h1>
+      Please use Google Chrome <img src="img/chrome_icon.svg" style="position: relative; top: 10px; height: 50px;" alt="chrome icon"> on a PC
+      <hr />
+      <asq-welcome></asq-welcome>
+    </div>
+
+
+    <div id="asq-function-min-array" class="step break" data-x="500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-js-function-body-q function-name="sum(a)" test-exp="sum([1,10,-1,-10,42]);">
+          <asq-stem>Ex.1 - Implement a function that returns the sum of the values of the input array:</asq-stem>
+        </asq-js-function-body-q>
+      </asq-exercise>
+    </div>
+    
+    <div id="asq-function-min-array-rating" class="print-hidden step break" data-x="1000" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+
+    <div id="asq-function-scope-lex" class="step" data-x="1500" data-y="0" data-scale="0.4" data-rotate="0">
+       <h2>Ex.2 - Lexical Scope</h2>
+    <pre><code>function f() {
+    console.log( a ); // ?
+}
+
+function g() {
+    var a = 3;
+    f();
+}
+
+var a = 2;
+
+g();</code></pre>
+
+      <asq-exercise>
+        <asq-text-input-q label="console" id="tq-1">
+          <asq-stem>What's the output on the console?</asq-stem>
+          <asq-solution hidden>2</asq-solution>
+        </asq-text-input-q>
+      </asq-exercise>
+    </div>  
+
+    <div id="asq-function-scope-lex-stats" class="print-hidden step break" data-x="2000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h2>Ex.2 - stats - Lexical Scope</h2>
+      <div class="layout horizontal">
+        <pre class="flex-2"><code>function f() {
+    console.log( a ); // ?
+}
+
+function g() {
+    var a = 3;
+    f();
+}
+
+var a = 2;
+
+g();</code></pre>
+
+        <asq-text-input-q-stats class="flex" for="tq-1">
+        </asq-text-input-q-stats>
+      </div>
+    </div>
+
+    <div id="asq-function-scope-lex-rating" class="print-hidden step break" data-x="2500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+    <div id="asq-function-scope" class="step" data-x="3000" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-highlight-q theme="" mode="javascript" font-size="0.5em">
+          <asq-solution>{
+          "428bca": [
+            {
+              "start": {
+                "row": 0,
+                "column": 4
+              },
+              "end": {
+                "row": 0,
+                "column": 5
+              },
+              "id": 64
+            },
+            {
+              "start": {
+                "row": 5,
+                "column": 2
+              },
+              "end": {
+                "row": 5,
+                "column": 3
+              },
+              "id": 68
+            }
+          ],
+          "d9534f": [
+            {
+              "start": {
+                "row": 4,
+                "column": 6
+              },
+              "end": {
+                "row": 4,
+                "column": 7
+              },
+              "id": 72
+            }
+          ]
+        }</asq-solution>
+          <asq-stem>Ex.3 - What is the Scope of the variables? Highlight variables with the appropriate color</asq-stem>
+          <asq-hl-color-task color="d9534f" colorName="d9534f">Local Variable</asq-hl-color-task>
+          <asq-hl-color-task color="428bca" colorName="428bca">Global Variable</asq-hl-color-task>
+          <code>var a = 12;
+
+function f(x,y) {
+  
+  var b = 42;
+  c = 'String';
+  
+}</code>
+        </asq-highlight-q>
+      </asq-exercise>
+    </div>
+
+    <div id="asq-function-scope-rating" class="print-hidden step break" data-x="3500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div> 
+
+    <div id="asq-function-args" class="step break" data-x="4000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h2>Ex.4 - Optional Arguments</h2>
+      <pre><code>function f(a,b,c) { 
+  <span class="substep">if (a===undefined) { a = 1 };  
+  if (!b) { b = 1 }; 
+  c = c || 1;</span>  
+  return a+b*c;
+}</code></pre>
+
+      <asq-exercise>
+        <asq-stem><h4>Enter the value of each variable after the expression is executed.</h4></asq-stem>
+        <asq-text-input-q label="y" id="tq-2">
+          <asq-stem><code>var y = f(1,2,3);</code></asq-stem>
+          <asq-solution hidden>7</asq-solution>
+        </asq-text-input-q>
+        <asq-text-input-q label="x" id="tq-3">
+          <asq-stem><code>var x = f(1);</code></asq-stem>
+          <asq-solution hidden>2</asq-solution>
+        </asq-text-input-q>
+        <asq-text-input-q label="z" id="tq-4">
+          <asq-stem><code>var z = f(1,2,3,4);</code></asq-stem>
+          <asq-solution hidden>7</asq-solution>
+        </asq-text-input-q>
+       </asq-exercise>
+    </div>  
+
+    <div id="asq-function-args-2-stats" class="print-hidden step break flash" data-x="4500" data-y="0" data-scale="0.4" data-rotate="0">
+      <h4>Ex.4 - stats.1 - Optional Arguments</h4>
+      <h2>var y = f(1,2,3);</h2>
+      <pre><code>function f(a,b,c) { 
+  if (a===undefined) { a = 1 };  
+  if (!b) { b = 1 }; 
+  c = c || 1;
+  return a+b*c;
+}</code></pre>
+
+      <asq-text-input-q-stats  for="tq-2">
+      </asq-text-input-q-stats>
+
+    </div>  
+
+    <div id="asq-function-args-3-stats" class="print-hidden step break flash" data-x="5000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h4>Ex.4 - stats.2 - Optional Arguments</h4>
+      <h2>var x = f(1);</h2>
+      <pre><code>function f(a,b,c) { 
+  if (a===undefined) { a = 1 };  
+  if (!b) { b = 1 }; 
+  c = c || 1;
+  return a+b*c;
+}</code></pre>
+
+      <asq-text-input-q-stats  for="tq-3">
+      </asq-text-input-q-stats>
+
+    </div>  
+
+    <div id="asq-function-args-4-stats" class="print-hidden step break flash" data-x="5500" data-y="0" data-scale="0.4" data-rotate="0">
+      <h4>Ex.4 - stats.3 - Optional Arguments</h4>
+      <h2>var z = f(1,2,3,4);</h2>
+      <pre><code>function f(a,b,c) { 
+  if (a===undefined) { a = 1 };  
+  if (!b) { b = 1 }; 
+  c = c || 1;
+  return a+b*c;
+}</code></pre>
+
+      <asq-text-input-q-stats  for="tq-4">
+      </asq-text-input-q-stats>
+
+    </div>  
+
+    <div id="asq-function-args-rating" class="print-hidden step break" data-x="6000" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+
+    <div id="function-inner" class="step break" data-x="6500" data-y="0" data-scale="0.4" data-rotate="0">
+      <h2>Ex.5 - Inner Functions</h2>
+
+      <ul class="small"><li>Basic Scope Rule: An inner function has access to the variables and parameters of all functions that it is contained within.</li></ul>
+
+      <pre><code>function outer(X,Y) {
+  var local = 1; 
+  var <b>inner</b> = function(K) {
+    var z = X + Y; 
+    return z + K + local;
+  }
+  return <b>inner</b>(1);
+} </code></pre>
+            
+       <asq-exercise>
+          <asq-stem><h4>Enter the value of <code>a</code> after the expression is executed.</h4></asq-stem>
+          <asq-text-input-q label="a" id="tq-5">
+            <asq-stem><code>var a = outer(-1,100); </code></asq-stem>
+            <asq-solution hidden>101</asq-solution>
+          </asq-text-input-q>
+       </asq-exercise>
+
+    </div>
+
+    <div id="function-inner-stats" class="print-hidden step" data-x="7000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h2>Ex.5 - stats - Inner Functions</h2>
+
+      <div class="layout horizontal">
+
+      <!-- code duplicate from previous slide -->
+        <pre class="flex-2"><code>function outer(X,Y) {
+  var local = 1; 
+  var <b>inner</b> = function(K) {
+    var z = X + Y; 
+    return z + K + local;
+  }
+  return <b>inner</b>(1);
+} </code></pre>
+              
+        <asq-text-input-q-stats class="flex" for="tq-5">
+        </asq-text-input-q-stats>
+
+      </div>
+
+      <!-- would be nice if this could be taken from the stem -->
+      <code>var a = outer(-1,100); </code>
+    </div>
+
+
+    <div id="function-inner-rating" class="print-hidden step break" data-x="7500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+    <div id="closures-ex1" class="step break" data-x="8000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h3>Ex.6 - Function inside a function</h3>
+      <pre><code>function outer(x) {
+  var inner = function(y) { return x * y; }
+  return inner;
+}
+var one = outer(1); 
+<span class="substep">//one = function(y) { return 1 * y; }</span>
+var two = outer(2); 
+<span class="substep">//two = function(y) { return 2 * y; }</span></code></pre>
+
+      <asq-exercise>
+        <asq-stem><h4>Enter the value of the variables after the expression is executed.</h4></asq-stem>
+        <asq-text-input-q label="a" id="tq-6">
+          <asq-stem><code>var a = one(10);</code></asq-stem>
+          <asq-solution hidden>10</asq-solution>
+        </asq-text-input-q>
+        <asq-text-input-q label="b" id="tq-7">
+          <asq-stem><code>var b = two(10);</code></asq-stem>
+          <asq-solution hidden>20</asq-solution>
+        </asq-text-input-q>
+      </asq-exercise>
+    </div>
+
+
+    <div id="closures-ex1-tq-6-stats" class="print-hidden step break flash" data-x="8500" data-y="0" data-scale="0.4" data-rotate="0">
+      <h3>Ex.6 - stats.1 - Function inside a function</h3>
+      <pre><code>function outer(x) {
+  var inner = function(y) { return x * y; }
+  return inner;
+}
+var one = outer(1); 
+//one = function(y) { return 1 * y; }</code></pre>
+<code>var a = one(10);</code>
+
+      <asq-text-input-q-stats  for="tq-6">
+      </asq-text-input-q-stats>
+
+    </div>
+
+    <div id="closures-ex1-tq-7-stats" class="print-hidden step break flash" data-x="9000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h3>Ex.6 - stats.2 - Function inside functions</h3>
+      <pre><code>function outer(x) {
+  var inner = function(y) { return x * y; }
+  return inner;
+}
+var two = outer(2); 
+//two = function(y) { return 2 * y; }</code></pre>
+<code>var b = two(10);</code>
+
+      <asq-text-input-q-stats for="tq-7">
+      </asq-text-input-q-stats>
+
+    </div> 
+
+
+    <div id="closures-ex1-rating" class="print-hidden step break" data-x="9500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+
+<div id="e-highlight-asq" class="step break flash" data-x="23500" data-y="0" data-scale="0.4" data-rotate="0">
+<h3>Ex.7 - Event Structure. Highlight the requested portions of code using the appropriate colors</h3>
+<asq-exercise>
+  <asq-highlight-q theme="" mode="html" font-size="0.5em">
+    <asq-solution>{
+  "d9534f": [
+    {
+      "start": {
+        "row": 7,
+        "column": 35
+      },
+      "end": {
+        "row": 7,
+        "column": 50
+      },
+      "id": 373
+    },
+    {
+      "start": {
+        "row": 14,
+        "column": 6
+      },
+      "end": {
+        "row": 14,
+        "column": 21
+      },
+      "id": 270
+    },
+    {
+      "start": {
+        "row": 17,
+        "column": 10
+      },
+      "end": {
+        "row": 17,
+        "column": 31
+      },
+      "id": 336
+    }
+  ],
+  "5cb85c": [
+    {
+      "start": {
+        "row": 3,
+        "column": 18
+      },
+      "end": {
+        "row": 5,
+        "column": 1
+      },
+      "id": 399
+    },
+    {
+      "start": {
+        "row": 6,
+        "column": 17
+      },
+      "end": {
+        "row": 8,
+        "column": 1
+      },
+      "id": 425
+    }
+  ],
+  "428bca": [
+    {
+      "start": {
+        "row": 14,
+        "column": 1
+      },
+      "end": {
+        "row": 14,
+        "column": 5
+      },
+      "id": 407
+    },
+    {
+      "start": {
+        "row": 15,
+        "column": 3
+      },
+      "end": {
+        "row": 15,
+        "column": 5
+      },
+      "id": 413
+    },
+    {
+      "start": {
+        "row": 17,
+        "column": 3
+      },
+      "end": {
+        "row": 17,
+        "column": 9
+      },
+      "id": 419
+    }
+  ]
+}</asq-solution>
+    <asq-stem></asq-stem>
+    <asq-hl-color-task color="d9534f" colorName="d9534f">Event type</asq-hl-color-task>
+    <asq-hl-color-task color="5cb85c" colorName="5cb85c">Event handler function body</asq-hl-color-task>
+    <asq-hl-color-task color="428bca" colorName="428bca">Elements with attached events</asq-hl-color-task>
+    <code>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function click(e) { 
+  console.log(e); 
+}
+function load(e) { 
+  document.getElementById("title").onclick = click;
+}
+function event(e) { 
+  console.log(e); 
+}
+&lt;/script&gt;
+&lt;head&gt;
+&lt;body onload=&quot;load()&quot;&gt;
+  &lt;h1 id=&quot;title&quot;&gt;Title&lt;/h1&gt;
+  &lt;p&gt;Paragraph&lt;/p&gt;
+  &lt;button onclick=&quot;click(this)&quot;&gt;Click Me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+  </asq-highlight-q>
+</asq-exercise>
+</div>
+
+<div id="e-highlight-asq-rating" class="print-hidden step break" data-x="24000" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div>
+
+<div id="timeout-order" class="step" data-x="27500" data-y="0" data-scale="0.4" data-rotate="0">
+
+<h3>Ex.8 - Put the items of array <code>a</code> in the correct order</h3>
+<pre><code>var a = [];
+a.push("a"); 
+setTimeout(function(){a.push("b")}, 1000); 
+setTimeout(function(){a.push("c")}, 1); 
+a.push("d");
+</code></pre>
+
+ <asq-exercise>
+  <asq-buckets-q
+    mode="1-1" 
+    x-matchable="div[buckets]" 
+    y-matchable="div[labels]" 
+    attr-for-matched="s-name"
+    matched-attribute="matched"
+    label-container="[labels]"
+    matched-class="label-success">
+
+    <div buckets>
+      <div s-name="one" bucket><strong>1</strong></div>
+      <div s-name="two" bucket><strong>2</strong></div>
+      <div s-name="three" bucket><strong>3</strong></div>
+      <div s-name="four" bucket><strong>4</strong></div>
+    </div>
+    
+    <div labels>
+      <div s-name="a" label class="label-primary">a</div>
+      <div s-name="b" label class="label-primary">b</div>
+      <div s-name="c" label class="label-primary">c</div>
+      <div s-name="d" label class="label-primary">d</div>
+    </div>
+  </asq-buckets-q>
+</asq-exercise>
+       
+</div>
+
+
+<div id="timeout-order-rating" class="print-hidden step break" data-x="28000" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div>
+
+    <div id="asq-function-json2" class="step" data-x="10000" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-js-function-body-q function-name="Create(a,b,c)" test-exp="Create(1,2,'S');">
+          <asq-stem>Ex.9 - <code>Create</code> returns an object structured like: <code>{a:Number, x:{b:Number, c:String}, y:123}</code></asq-stem>
+        </asq-js-function-body-q>
+     </asq-exercise>
+    </div>
+
+    <div id="asq-function-json2-rating" class="print-hidden step break" data-x="10500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+
+    <div id="asq-function-json" class="step" data-x="11000" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-js-function-body-q function-name="getZip(o)" test-exp="getZip({name:'CP', address:{ street:'via Buffi', number:13, zip:6900, city:'Lugano'}});">
+          <asq-stem>Ex.10 - <code>getZip</code> should return the zip code of the address</asq-stem>
+        </asq-js-function-body-q>
+      </asq-exercise>
+    </div>
+
+    <div id="asq-function-json-rating" class="print-hidden step break" data-x="11500" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+    <div id="obj-proto-chain-f-asq" class="step" data-x="12000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h4>Ex.11 - Prototype chain</h4>
+      <pre class="smaller"><code>function F(x){  this.a = x;   }
+F.prototype.m = function(x) {  return this.a + x;  }
+
+function G(x,y) {
+  // calls a function with a given this value and
+  // arguments provided individually
+  F.call(this,x);
+  this.b = y;
+}
+G.prototype = new F();
+G.prototype.constructor = G;
+G.prototype.n = function(x) {
+  return this.a + x + this.b;  
+}
+
+var o = new G(1,2);</code></pre>
+      <asq-exercise>
+        <asq-stem><h4>Enter the value of each variable after the expression is executed.</h4></asq-stem>
+
+        <asq-text-input-q label="a" id="tq-8">
+          <asq-stem><code>var a = o.m(41); </code></asq-stem>
+          <asq-solution hidden>42</asq-solution>
+        </asq-text-input-q>
+        <asq-text-input-q label="b" id="tq-9">
+          <asq-stem><code>var b = o.n(" "); </code></asq-stem>
+          <asq-solution hidden>"1 2"</asq-solution>
+        </asq-text-input-q>
+      </asq-exercise>
+    </div> 
+
+
+    <div id="obj-proto-chain-f-asq-1-stats" class="print-hidden step break flash" data-x="12500" data-y="0" data-scale="0.4" data-rotate="0">
+      <h4>Ex.11 - stats.1 - Prototype chain</h4>
+      <pre class="smaller"><code>function F(x){  this.a = x;   }
+    F.prototype.m = function(x) {  return this.a + x;  }
+
+    function G(x,y) {
+      F.call(this,x);
+      this.b = y;
+    }
+    G.prototype = Object.create(F.prototype);
+    G.prototype.n = function(x) {
+      return this.a + x + this.b;  
+    }
+
+    var o = new G(1,2);</code></pre>
+
+      <code>var a = o.m(41); </code>
+
+      <asq-text-input-q-stats  for="tq-8">
+      </asq-text-input-q-stats>
+    </div>
+
+    <div id="obj-proto-chain-f-asq-2-stats" class="print-hidden step break flash" data-x="13000" data-y="0" data-scale="0.4" data-rotate="0">
+      <h4>Ex.11 - stats.2 - Prototype chain</h4>
+      <pre class="smaller"><code>function F(x){  this.a = x;   }
+F.prototype.m = function(x) {  return this.a + x;  }
+
+function G(x,y) {
+  F.call(this,x);
+  this.b = y;
+}
+G.prototype = Object.create(F.prototype);
+G.prototype.n = function(x) {
+  return this.a + x + this.b;  
+}
+
+var o = new G(1,2);</code></pre>
+
+      <code>var b = o.n(" "); </code>
+
+      <asq-text-input-q-stats  for="tq-9">
+      </asq-text-input-q-stats>
+    </div>
+
+
+  <div id="obj-proto-chain-f-rating" class="print-hidden step break" data-x="13500" data-y="0" data-scale="0.4" data-rotate="0">
+    <asq-exercise>
+      <asq-rating-q type="stars">
+        <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+         <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+      </asq-rating-q>
+       <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+    </asq-exercise>
+  </div>
+
+  <div id="dom-delete" class="step" data-x="14000" data-y="0" data-scale="0.4" data-rotate="0">
+    <h3>Ex.12 - Removing DOM elements</h3>
+    <pre><code class="javascript">// remove desc (a &lt;p&gt; element ) from todoItem
+// (a &lt;div&gt; element)
+todoItem.removeChild(desc)</code></pre>
+
+    <asq-exercise class="substep">
+      <asq-text-input-q label="" id="tq-10">
+        <asq-stem>How to remove the `todoItem' itself?</asq-stem>
+        <asq-solution hidden>todoItem.parentNode.removeChild(todoItem)</asq-solution>
+      </asq-text-input-q>
+    </asq-exercise>
+  </div>
+
+    <div id="dom-delete-stats" class="print-hidden step break" data-x="14500" data-y="0" data-scale="0.4" data-rotate="0">
+      <h3>Ex.12 - stats - Removing DOM elements</h3>
+      <pre><code class="javascript">//remove desc (a &lt;p&gt; element ) from todoItem 
+// (a &lt;div&gt; element)
+todoItem.removeChild(desc)</code></pre>
+      <p>How to remove the `todoItem' itself?</p>
+
+      <asq-text-input-q-stats for="tq-10">
+      </asq-text-input-q-stats>
+
+    </div>  
+
+    <div id="dom-delete-rating" class="print-hidden step break" data-x="15000" data-y="0" data-scale="0.4" data-rotate="0">
+      <asq-exercise>
+        <asq-rating-q type="stars">
+          <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+           <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+        </asq-rating-q>
+         <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+      </asq-exercise>
+    </div>
+
+<div id="byvalueref" class="step break flash" data-x="16500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.13 - By value or by reference?</h4>
+<pre><code>var a = 42;
+var o = { name: 'Vincenzo' }
+var q = { name: 'Andrea' }
+function f(x,y,z) {
+  x = -x;
+  y.name = 'Vassilis';
+  z = { name: 'Masiar'};
+}
+f(a,o,q);</code></pre>
+        <asq-exercise>
+          <asq-stem><h4>Enter the value of each variable after the expression is executed.</h4></asq-stem>
+          <asq-text-input-q label="a" id="tvq-1">
+            <asq-stem><code>a</code></asq-stem>
+            <asq-solution hidden>42</asq-solution>
+          </asq-text-input-q>
+          <asq-text-input-q label="o.name" id="tvq-2">
+            <asq-stem><code>o.name</code></asq-stem>
+            <asq-solution hidden>Vassilis</asq-solution>
+          </asq-text-input-q>
+           <asq-text-input-q label="q.name" id="tvq-3">
+            <asq-stem><code>q.name</code></asq-stem>
+            <asq-solution hidden>Andrea</asq-solution>
+          </asq-text-input-q>
+       </asq-exercise>
+</div>
+
+
+<div id="byvalueref-1-stats" class="print-hidden step break flash" data-x="17000" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.13 - stats.1 - By value or by reference?</h4>
+<pre><code>var a = 42;
+var o = { name: 'Vincenzo' }
+var q = { name: 'Andrea' }
+function f(x,y,z) {
+  x = -x;
+  y.name = 'Vassilis';
+  z = { name: 'Masiar'};
+}
+f(a,o,q);
+</code></pre>
+
+<code>a</code>
+
+<asq-text-input-q-stats  for="tvq-1">
+</asq-text-input-q-stats>
+
+</div>  
+
+
+<div id="byvalueref-2-stats" class="print-hidden step break flash" data-x="17500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.13 - stats.2 - By value or by reference?</h4>
+<pre><code>var a = 42;
+var o = { name: 'Vincenzo' }
+var q = { name: 'Andrea' }
+function f(x,y,z) {
+  x = -x;
+  y.name = 'Vassilis';
+  z = { name: 'Masiar'};
+}
+f(a,o,q);
+</code></pre>
+
+<code>o.name</code>
+
+<asq-text-input-q-stats  for="tvq-2">
+</asq-text-input-q-stats>
+
+</div>  
+
+
+
+<div id="byvalueref-3-stats" class="print-hidden step break flash" data-x="18000" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.13 - stats.3 - By value or by reference?</h4>
+<pre><code>var a = 42;
+var o = { name: 'Vincenzo' }
+var q = { name: 'Andrea' }
+function f(x,y,z) {
+  x = -x;
+  y.name = 'Vassilis';
+  z = { name: 'Masiar'};
+}
+f(a,o,q);
+</code></pre>
+
+<code>q.name</code>
+
+<asq-text-input-q-stats  for="tvq-3">
+</asq-text-input-q-stats>
+
+</div> 
+
+<div id="byvalueref-rating" class="print-hidden step break" data-x="18500" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+
+<div id="strange-sum" class="step break" data-x="19000" data-y="0" data-scale="0.4" data-rotate="0">
+
+        <asq-exercise>
+          <asq-js-function-body-q function-name="strange_sum(x)" test-exp="strange_sum(24)(24);">
+            <asq-stem>Ex.14 - Implement a sum function that can be called in two steps <code>sum(x)(y) == x + y</code></asq-stem><!-- return function(y){ return x + y; };-->
+          </asq-js-function-body-q>
+       </asq-exercise>
+</div>
+
+<div id="strange-sum-rating" class="print-hidden step break" data-x="19500" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+
+<div id="callback-asq" class="step" data-x="20000" data-y="0" data-scale="0.4" data-rotate="0">
+
+        <asq-exercise>
+          <asq-js-function-body-q function-name="call(c,x,y)" test-exp="call(function f(x,y){return x+y; }, 40, 2);">
+            <asq-stem>Ex.15 - Call back the function <code>c</code> with the given parameters <code>x,y</code> and check if the result is <code>42</code></asq-stem>
+          </asq-js-function-body-q>
+       </asq-exercise>
+
+</div>
+
+<div id="callback-asq-rating" class="print-hidden step break" data-x="20500" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+<div id="this-callsite" class="step break flash" data-x="21000" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.16 - Objects and scope</h4>
+<pre class="small"><code>var name = 'Vassilis';
+var a = {
+   name: 'Vincenzo',
+   f: {
+      name: 'Andrea',
+      getName: function() {
+         return this.name;
+      }
+   }
+};
+var f = a.f.getName;</code></pre>
+        <asq-exercise>
+          <asq-text-input-q label="b" id="tq-11">
+            <asq-stem><code>var b = a.f.getName();</code></asq-stem>
+            <asq-solution hidden>Andrea</asq-solution>
+          </asq-text-input-q>
+          <asq-text-input-q label="c" id="tq-12">
+            <asq-stem><code>var c = f(); </code></asq-stem>
+            <asq-solution hidden>Vassilis</asq-solution>
+          </asq-text-input-q>
+           <asq-text-input-q label="d" id="tq-13">
+            <asq-stem><code>var d = a.getName()</code></asq-stem>
+            <asq-solution hidden>TypeError!</asq-solution>
+          </asq-text-input-q>
+       </asq-exercise>
+</div>
+
+<div id="this-callsite-1-stats" class="print-hidden step break flash" data-x="21500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.16 - stats.1 - Objects and scope</h4>
+<pre class="small"><code>var name = 'Vassilis';
+var a = {
+   name: 'Vincenzo',
+   friend: {
+      name: 'Andrea',
+      getName: function() {
+         return this.name;
+      }
+   }
+};
+</code></pre>
+
+<code>var b = a.friend.getName();</code>
+
+<asq-text-input-q-stats  for="tq-11">
+</asq-text-input-q-stats>
+
+</div>  
+
+
+<div id="this-callsite-2-stats" class="print-hidden step break flash" data-x="22000" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.16 - stats.2 - Objects and scope</h4>
+<pre class="small"><code>var name = 'Vassilis';
+var a = {
+   name: 'Vincenzo',
+   friend: {
+      name: 'Andrea',
+      getName: function() {
+         return this.name;
+      }
+   }
+};
+var f = a.friend.getName;</code></pre>
+
+<code>var c = f(); </code>
+
+<asq-text-input-q-stats  for="tq-12">
+</asq-text-input-q-stats>
+
+</div>  
+
+
+<div id="this-callsite-3-stats" class="print-hidden step break flash" data-x="22500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.16 - stats.3 - Objects and scope</h4>
+<pre class="small"><code>var name = 'Vassilis';
+var a = {
+   name: 'Vincenzo',
+   friend: {
+      name: 'Andrea',
+      getName: function() {
+         return this.name;
+      }
+   }
+};
+</code></pre>
+
+<code>var d = a.getName()</code>
+
+<asq-text-input-q-stats  for="tq-13">
+</asq-text-input-q-stats>
+
+</div>  
+
+<div id="this-callsite-rating" class="print-hidden step break" data-x="23000" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div>
+
+
+<div id="obj-proto-chain-shadow-asq" class="step break flash" data-x="24500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.17 - Overriding methods</h4>
+<pre class="x-small"><code>function F(){ }
+F.prototype.sayHi = function(x) {  console.log("Hi");  }
+F.prototype.sayBye = function(x) {  console.log("Bye");  }
+function G() {
+  // calls a function with a given this value and
+  // arguments provided individually
+  F.call(this);
+}
+G.prototype = new F();
+G.prototype.constructor = G;
+G.prototype.sayBye = function(x) {  console.log("Vaarwel"); }
+
+var foo = new G();
+foo.sayHi = function(){ console.log("Hallo"); }
+
+var bar = new G();</code></pre>
+<asq-exercise>
+  <asq-text-input-q label="output" id="tq-14">
+    <asq-stem><code>foo.sayHi(); </code></asq-stem>
+    <asq-solution hidden>Hallo</asq-solution>
+  </asq-text-input-q>
+  <asq-text-input-q label="output" id="tq-15">
+    <asq-stem><code>foo.sayBye(); </code></asq-stem>
+    <asq-solution hidden>Vaarwel</asq-solution>
+  </asq-text-input-q>
+  <asq-text-input-q label="output" id="tq-16">
+    <asq-stem><code>bar.sayHi(); </code></asq-stem>
+    <asq-solution hidden>Hi</asq-solution>
+  </asq-text-input-q>
+  <asq-text-input-q label="output" id="tq-17">
+    <asq-stem><code>bar.sayBye(); </code></asq-stem>
+    <asq-solution hidden>Bye</asq-solution>
+  </asq-text-input-q>
+</asq-exercise>
+</div> 
+
+<div id="obj-proto-chain-shadow-asq-1-stats" class="print-hidden step break flash" data-x="25000" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.17 - stats. - Overriding methods</h4>
+<pre class="smaller"><code>function F(){ }
+F.prototype.sayHi = function(x) {  console.log("Hi");  }
+F.prototype.sayBye = function(x) {  console.log("Bye");  }
+
+function G() {
+  F.call(this);
+}
+G.prototype = new F();
+G.prototype.constructor = G;
+G.prototype.sayBye = function(x) {  console.log("Vaarwel"); }
+
+var foo = new G();
+foo.sayHi = function(){ console.log("Hallo"); }
+
+var bar = new G();</code></pre>
+
+<code>foo.sayHi();</code>
+
+<asq-text-input-q-stats  for="tq-14">
+</asq-text-input-q-stats>
+
+</div> 
+
+<div id="obj-proto-chain-shadow-asq-2-stats" class="print-hidden step break flash" data-x="25500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.17 - stats. - Overriding methods</h4>
+<pre class="smaller"><code>function F(){ }
+F.prototype.sayHi = function(x) {  console.log("Hi");  }
+F.prototype.sayBye = function(x) {  console.log("Bye");  }
+
+function G() {
+  F.call(this);
+}
+G.prototype = new F();
+G.prototype.constructor = G;
+G.prototype.sayBye = function(x) {  console.log("Vaarwel"); }
+
+var foo = new G();
+foo.sayHi = function(){ console.log("Hallo"); }
+
+var bar = new G();</code></pre>
+
+<code>foo.sayBye();</code>
+
+<asq-text-input-q-stats  for="tq-15">
+</asq-text-input-q-stats>
+
+</div> 
+
+<div id="obj-proto-chain-shadow-asq-3-stats" class="print-hidden step break flash" data-x="26000" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.17 - stats. - Overriding methods</h4>
+<pre class="smaller"><code>function F(){ }
+F.prototype.sayHi = function(x) {  console.log("Hi");  }
+F.prototype.sayBye = function(x) {  console.log("Bye");  }
+
+function G() {
+  F.call(this);
+}
+G.prototype = new F();
+G.prototype.constructor = G;
+G.prototype.sayBye = function(x) {  console.log("Vaarwel"); }
+
+var foo = new G();
+foo.sayHi = function(){ console.log("Hallo"); }
+
+var bar = new G();</code></pre>
+
+<code>bar.sayHi();</code>
+
+<asq-text-input-q-stats  for="tq-16">
+</asq-text-input-q-stats>
+
+</div> 
+
+<div id="obj-proto-chain-shadow-asq-4-stats" class="print-hidden step break flash" data-x="26500" data-y="0" data-scale="0.4" data-rotate="0">
+<h4>Ex.17 - stats. - Overriding methods</h4>
+<pre class="small"><code>function F(){ }
+F.prototype.sayHi = function(x) {  console.log("Hi");  }
+F.prototype.sayBye = function(x) {  console.log("Bye");  }
+
+function G() {
+  F.call(this);
+}
+G.prototype = new F();
+G.prototype.constructor = G;
+G.prototype.sayBye = function(x) {  console.log("Vaarwel"); }
+
+var foo = new G();
+foo.sayHi = function(){ console.log("Hallo"); }
+
+var bar = new G();</code></pre>
+
+<code>bar.sayBye();</code>
+
+<asq-text-input-q-stats  for="tq-17">
+</asq-text-input-q-stats>
+
+</div>  
+
+<div id="obj-proto-chain-shadow-asq-rating" class="print-hidden step break" data-x="27000" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+     Please fill in a survey on the usability of ASQ <a href="https://docs.google.com/forms/d/1J3p60TpceXVLAboy5bROAkB3FBgLRx9udnfITeOuXFo/viewform">here</a>
+</div>
+
+
+
+
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/svg-injector/dist/svg-injector.min.js"></script>
+  <script src="bower_components/asq-impress-js/js/impress.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/canvas.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/highlight.min.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/main.js"></script>
+
+
+</body>
+</html>
+
