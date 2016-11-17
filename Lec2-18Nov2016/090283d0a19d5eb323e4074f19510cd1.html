@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="frameworkData/impress.css">
     <link rel="stylesheet" href="css/base.min.css">
     <link rel="stylesheet" href="css/090283d0a19d5eb323e4074f19510cd1.css">
+    <link rel="stylesheet" href="css/rainbow.min.css">
 
 <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 <script>
@@ -366,27 +367,32 @@ to advance a slide -->
     
     <div id="asq-5" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="104" data-timer="30">
        
-  <asq-exercise style=" margin-top: 80px; height: 90px; background: rgba(255, 255, 255, 0.0); padding: 10px;">
-   <asq-stem></asq-stem>
-   <asq-text-input-q id="ti-2">
-     <asq-stem>
-    <h8>Fill in the Blanks by replacing A, B, C</h8></asq-stem>
-     <div class="xxx-small boxed">
-        <div>&lt!doctype html&gt</div>
-        <div>&lthtml&gt</div>
-        <div>&lthead&gt</div>
-        <div>&lttitle&gtMy First Form&lt/title&gt</div>
-        <div>&lt/head&gt</div>
-        <div>&ltbody&gt</div>
-        <div>&ltform action="http://www.google.com/search"method="<span style="color: yellow;"><b>A</b></span>" target="_blank"&gt</div>
-        <div>&ltinput name="q" type="<span style="color: yellow;"><b>B</b></span>" /&gt</div>
-        <div>&ltinput type="submit" value="<span style="color: yellow;"><b>C</b></span>"/&gt</div>
-        <div>&lt/form&gt</div>
-        <div>&lt/body&gt</div>
-        <div>&lt/html&gt</div>
-    </div>
-    <asq-solution hidden>get|post, text, Search Google</asq-solution>
-   </asq-text-input-q>
+  <asq-exercise style=" margin-top: 70px; height: 90px; background: rgba(255, 255, 255, 0.0); padding: 10px;">
+   <asq-stem>     
+        <h4 class="small">Fill in the Blanks by replacing A, B, C</h4>
+         <pre style="font-size: 0.4em;"><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Form&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action=&quot;http://www.google.com/search&quot;method=&quot;A&quot; target=&quot;_blank&quot;&gt;
+      &lt;input name=&quot;q&quot; type=&quot;B&quot; /&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;C&quot;/&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</asq-stem>
+   
+    <asq-text-input-q style="display: inline-block;" id="ti-2" label="A">
+         <asq-solution hidden>get|post</asq-solution>
+    </asq-text-input-q>
+    <asq-text-input-q style="display: inline-block;" id="ti-3" label="B">
+         <asq-solution hidden>text</asq-solution>
+    </asq-text-input-q>
+    <asq-text-input-q style="display: inline-block;" id="ti-4" label="C">
+         <asq-solution hidden>Search Google</asq-solution>
+    </asq-text-input-q>
    </asq-exercise>
   </div>
 
@@ -582,62 +588,69 @@ to advance a slide -->
 
 
 
-    <div id="asq-8" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="170" data-timer="30">
+    <div id="asq-8" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="170" data-timer="30" style="height: 780px; padding: 20px;">
 
-  <asq-exercise style=" margin-top: 20px; height: 170px; background: rgba(255, 255, 255, 0.6); padding: 10px;">
-   <asq-stem></asq-stem>
-   <asq-multi-choice-q>
-     <asq-stem>
-    <div class="xxx-small">A user visits index.html. Which version(s) of the manifest cache(s) the entire Web site?</div></asq-stem>
+    <div style="display: flex; justify-content: space-between;">
+      <pre class="no-highlight trans xxx-small" style="width: 450px; margin-right: 20px;"><code><span style="color: rgb(108, 146, 211);">&lt;!&mdash;- index.html &mdash;-&gt;</span>
+&lt;!doctype html&gt;
+<span style="color: rgb(214, 147, 47);">&lt;html manifest=&ldquo;myman.appcache&rdquo;&gt;</span>
+  &lt;head&gt;
+    &lt;title&gt;My First Web App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h2&gt;
+    &lt;p&gt;Go &lt;a href=&ldquo;faq.html&rdquo;&gt;to the FAQ
+     page&lt;/a&gt; for more infos.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
-   <asq-option class="xxxx-small" name="A.">v1</asq-option>
-   <asq-option class="xxxx-small" name="B.">v2</asq-option>
-   <asq-option class="xxxx-small" name="C." correct>v3</asq-option>
-   <asq-option class="xxxx-small" name="D.">v1, v2 & v3</asq-option>
-   <asq-option class="xxxx-small" name="E.">v2 & v3</asq-option>
-   </asq-multi-choice-q>
-   </asq-exercise>
-    <div class="box1 xxx-small">
-        <div><span style="color: orange;">#v1</span></div>
+
+    <pre class="no-highlight trans xxx-small" style="width: 450px;"><code><span style="color: rgb(108, 146, 211);">&lt;!&mdash;- faq.html &mdash;-&gt;</span>
+&lt;!doctype html&gt;
+<span style="color: rgb(214, 147, 47);">&lt;html manifest=&ldquo;myman.appcache&rdquo;&gt;</span>
+  &lt;head&gt;
+    &lt;title&gt;FAQ&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;FAQ overview&lt;/h2&gt;
+    &lt;p&gt;Go &lt;a href=&ldquo;index.html&rdquo;&gt;
+      Go back&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+
+  <div style="display: flex; justify-content: center; height: 120px; margin-top: 20px;">
+    <div class="trans xxx-small" style="font-family: courier; padding: 5px 15px 5px 5px;">
+        <div><span style="color: rgb(214, 147, 47);"><b>#v1</b></span></div>
         <div>CACHE MANIFEST</div>
     </div>
-    <div class="box2 xxx-small">
-        <div><span style="color: orange;">#v2</span></div>
+    <div class="trans xxx-small" style="font-family: courier; padding: 5px 15px 5px 5px; margin: 0 40px;">
+        <div><span style="color: rgb(214, 147, 47);"><b>#v2</b></span></div>
         <div>CACHE MANIFEST</div>
         <div>index.html</div>
     </div>
-    <div class="box3 xxx-small">
-        <div><span style="color: orange;">#v3</span></div>
+    <div class="trans xxx-small" style="font-family: courier; padding: 5px 15px 5px 5px;">
+        <div><span style="color: rgb(214, 147, 47);"><b>#v3</b></span></div>
         <div>CACHE MANIFEST</div>
         <div>index.html</div>
         <div>faq.html</div>
     </div>
-    <div class="box4 xxxx-small">
-      <div><span style="color: blue;">&lt!—- index.html —-&gt</span></div>
-      <div>&lt!doctype html&gt</div>
-      <div><span style="color: orange;">&lthtml manifest=“myman.appcache”&gt</span></div>
-      <div>&lthead&gt</div>
-      <div>&lttitle&gtMy First Web App&lt/title&gt</div>
-      <div>&lt/head&gt</div>
-      <div>&ltbody&gt</div>
-      <div>&lth1&gtHello World!&lt/h2&gt</div>
-      <div>&ltp&gtGo &lta href=“faq.html”&gtto the FAQ page&lt/a&gt for more infos.&lt/p&gt</div>
-      <div>&lt/body&gt</div>
-      <div>&lt/html&gt</div>
-         </div>
-    <div class="box5 xxxx-small">
-      <div><span style="color: blue;">&lt!—- faq.html —-&gt</span></div>
-      <div>&lt!doctype html&gt</div>
-      <div><span style="color: orange;">&lthtml manifest=“myman.appcache”&gt</span></div>
-      <div>&lthead&gt</div>
-      <div>&lttitle&gtFAQ&lt/title&gt</div>
-      <div>&lt/head&gt</div>
-      <div>&ltbody&gt</div>
-      <div>&lth1&gtFAQ overview&lt/h2&gt</div>
-      <div>&ltp&gtGo &lta href=“index.html”&gtGo back&lt/a&gt&lt/p&gt</div>
-      <div>&lt/body&gt</div>
-      <div>&lt/html&gt</div>
-         </div>
+  </div>
+
+    <asq-exercise style=" margin-top: 20px; height: 230px; background: rgba(255, 255, 255, 0.6); padding: 10px; color: #444;">
+     <asq-stem></asq-stem>
+     <asq-multi-choice-q>
+       <asq-stem>
+      <h4 class="x-small">A user visits index.html. Which version(s) of the manifest cache(s) the entire Web site?</h4></asq-stem>
+
+     <asq-option style="display: inline-block;" class="x-small" name="A.">v1</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="x-small" name="B.">v2</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="x-small" name="C." correct>v3</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="x-small" name="D.">v1, v2 & v3</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="x-small" name="E.">v2 & v3</asq-option>
+     </asq-multi-choice-q>
+    </asq-exercise>
+
    <div class="flickr-credit">flickr@theo_reth</div>
   </div>
 
@@ -652,12 +665,16 @@ to advance a slide -->
 
 </div>
 <script src="frameworkData/impress.js"></script>
+<script src="js/highlight.min.js"></script>
 <script src="frameworkData/main.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/display-asq-solutions.js"></script>
 <script src="bower_components/impress-step-timer/impress-step-timer.js"></script>
 <script type="text/javascript">
-        
+// syntax highlighting
+if (typeof hljs != "undefined") {
+  hljs.initHighlightingOnLoad();
+}
 var aSlide = document.querySelectorAll('.pc')[0];
             var slideElem = document.getElementsByClassName("slide")[0];
             
