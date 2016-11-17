@@ -1,11 +1,16 @@
 {
   "name": "asq-presentation",
   "private": "true",
-  "authors": [ "ASQ" ],
+  "authors": [
+    "ASQ"
+  ],
   "description": "Presentation generated from ASQ",
-  "keywords": [ "ASQ" ],
+  "keywords": [
+    "ASQ"
+  ],
   "dependencies": {
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
-    "webcomponentsjs": "*"
+    "webcomponentsjs": "*",
+    "impress-step-timer": "triglian/impress-step-timer"
   }
 }
