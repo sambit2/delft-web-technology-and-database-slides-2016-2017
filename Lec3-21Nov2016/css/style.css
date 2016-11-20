@@ -184,8 +184,24 @@ asq-sqlite-q{min-height: 650px; }
   background-image: url('../img/asq-8.jpg');
   background-size: cover;
 }
+#asq-9{
+  background-image: url('../img/asq-9.jpg');
+  background-size: cover;
+}
+#asq-10{
+  background-image: url('../img/asq-10.jpg');
+  background-size: cover;
+}
+#asq-11{
+  background-image: url('../img/asq-11.jpg');
+  background-size: cover;
+}
 #asq-3-stats{
   background-image: url('../img/asq-3.jpg');
+  background-size: cover;
+}
+#asq-9-stats{
+  background-image: url('../img/asq-9.jpg');
   background-size: cover;
 }
 
@@ -226,11 +242,24 @@ asq-exercise h4{
   text-shadow: 0 0 0 rgba(0,0,0, 0.3);
 }
 
+.from-reveal .flickr-credit{
+  font-size: 0.6em;
+}
+
 .trans{
   border-radius: 0;
   background: rgba(0,0,0,0.7);
   border: none;
   color: rgb(212, 211, 212);
+  padding: 5px;
+  box-shadow: none;
+}
+
+
+.trans-white{
+  border-radius: 0;
+  background: rgba(255,255,255, 0.8);
+  border: none;
   padding: 5px;
   box-shadow: none;
 }

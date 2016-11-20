@@ -749,11 +749,9 @@ function sayHello() {
 
 
     <section id="asq-9" class="step flash from-reveal">
-      <h2>document.getElementById</h2>
     <asq-exercise>
-      <asq-text-input-q id="ti-2" label="enter HTML here">
-        <asq-stem> <p>What is the corresponding HTML snippet to enable this JavaScript code to work?</p>
-      <pre class="small"><code>/* JavaScript file, imported with &lt;script&gt; */
+      <asq-stem> <h3 class="trans-white">What is the corresponding HTML snippet to enable this JavaScript code to work?</h3>
+        <pre class="small trans-white"><code style="background-color: transparent;">/* JavaScript file, imported with &lt;script&gt; */
 
 /* we attach a function to a button's click event 
  * after the DOM finished loading (i.e. all HTML elements are accessible)
@@ -767,16 +765,18 @@ function sayHello() {
   var tb = document.getElementById("out");
   tb.value = 'Hello World';
 };</code></pre></asq-stem>
+      <asq-text-input-q id="ti-2" label="enter HTML here" class="trans-white">
         <asq-solution hidden><input type="submit" value="Say Hello World!" id="myButton"> <input type="text" id="out"></asq-solution>
       </asq-text-input-q>
     </asq-exercise>
-
+    <div class="flickr-credit">flickr@husker_alum</div>
     </section>
 
     <section id="asq-9-stats" class="step flash from-reveal">
        <p>What is the corresponding HTML snippet to enable this JavaScript code to work?</p>
       <asq-text-input-q-stats for="ti-2" style="height: 650px;">
       </asq-text-input-q-stats>
+      <div class="flickr-credit">flickr@husker_alum</div>
     </asq-exercise>
 
     </section>
@@ -1030,9 +1030,8 @@ function computeTimes() {
 
     <section id="asq-10" class="step flash from-reveal">
       <asq-exercise>
-        <asq-multi-choice-q>
-          <asq-stem><h3>What is the output when running this JavaScript in the browser?</h3>
-            <pre><code>var o = {prop: 37};
+        <asq-stem><h3 class="trans-white">What is the output when running this JavaScript in the browser?</h3>
+            <pre class="trans-white"><code style="background-color: transparent;">var o = {prop: 37};
 var prop = 15; //this is window.prop
 function independent() {
   return this.prop;
@@ -1041,12 +1040,15 @@ function independent() {
 o.f = independent;
 console.log(o.f());
 </code></pre></asq-stem>
+        <asq-multi-choice-q class="trans-white">
         <asq-option name="A.">15</asq-option>
         <asq-option name="B." correct>37</asq-option>
         <asq-option name="C.">error, functions cannot be assigned to variables</asq-option>
         <asq-option name="D.">error, <code>f</code> was not defined in <code>o</code></asq-option>
         </asq-multi-choice-q>
       </asq-exercise>
+
+      <div class="flickr-credit">flickr@mulletar</div>
     </section>
 
 
@@ -1100,13 +1102,13 @@ console.log(o.f());
                 <li><code>onchange</code>: fires when the value of an element changes</li>
               </ul>
 
-              <input type="text" placeholder="Give me a number" onblur="
+              <input type="text" placeholder="Give me something" onblur="
               {
                 var input = this.value;
                 var matches = input.match(/[0-9]/g);
                 if(matches==null || input.length != matches.length) {
                   this.style.color = 'red';
-                  this.value = 'Numbers only';
+                  this.value = 'This is not right';
                 }
                 else {
                   this.style.color = 'black';
@@ -1124,9 +1126,8 @@ console.log(o.f());
 
       <section id="asq-11" class="step flash from-reveal">
         <asq-exercise>
-          <asq-multichoice-q>
-            <asq-stem><h4>In which instance does the program enter the <code>else</code> block?</h4>
-              <pre class="small"><code>/* JavaScript */
+          <asq-stem><h4 class="trans-white">In which instance does the program enter the <code>else</code> block?</h4>
+              <pre class="small trans-white"><code style="background-color: transparent;">/* JavaScript */
 function whatToDoOnBlur(){
   var input = this.value;
   <span style="background-color: #f7c56a;">var matches = input.match(/[0-9]/g);</span>
@@ -1141,18 +1142,17 @@ function whatToDoOnBlur(){
     this.style.color = 'black';
   }
 }</code></pre> </asq-stem>
-            
+          <asq-multi-choice-q class="trans-white">            
             <asq-option  class="small" name="A.">when the input string starts with a digit, and is followed by a <code>g</code></asq-option>
             <asq-option  class="small" name="B." correct>when the input string is a non-negative integer</asq-option>
             <asq-option  class="small" name="C.">when the input string represents any number (integer, float, etc.)</asq-option>
             <asq-option  class="small" name="D.">when the input string contains between 0 and 9 <code>g</code>s</asq-option>
-          </asq-multichoice-q>
+          </asq-multi-choice-q>
           
         </asq-exercise>
               
-
-
-            </section>
+        <div class="flickr-credit">flickr@chug</div>
+      </section>
 
             <!-- slide: S_C -->
             <section id="dom-21" class="step flash from-reveal">
