@@ -1,1 +1,1 @@
-## Comtains the first Lecture
+## Contains the first Lecture
