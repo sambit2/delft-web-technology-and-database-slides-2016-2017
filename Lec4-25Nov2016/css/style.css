@@ -338,6 +338,14 @@ asq-exercise h4{
   box-shadow: none;
 }
 
+.trans-white{
+  border-radius: 0;
+  background: rgba(255,255,255, 0.8);
+  border: none;
+  padding: 5px;
+  box-shadow: none;
+}
+
 @media print {
 
   body{

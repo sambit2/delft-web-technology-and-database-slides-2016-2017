@@ -55,7 +55,7 @@ to advance a slide -->
   top: 66px;
   left: 87px;
   width: 850px;
-  height: 96px;
+  height: 120px;
   background: rgba(0,0,0, 0.7);">
             <asq-welcome class="small"></asq-welcome>
         </div>
@@ -124,15 +124,22 @@ to advance a slide -->
 
 
   
-   <div id="asq-1" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="16" data-timer="60">
+  <div id="asq-1" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="16" data-timer="60">
        
-  <asq-exercise style=" margin-top: 90px; height: 380px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
-   <asq-stem>     
+    <asq-exercise style=" margin-top: 90px; height: 380px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
+      <asq-stem>     
         <h4 class="small">Which problems might arise when using Excel as a data management solution? [e.g. would it work for a Bank?] (Open Question)</h4>
-   </asq-stem>
-    <asq-text-input-q id="ti-1">
-    </asq-text-input-q>
-   </asq-exercise>
+      </asq-stem>
+      <asq-text-input-q id="ti-1"></asq-text-input-q>
+    </asq-exercise>
+
+    <div class="trans-white">
+      <paper-toggle-button class="h-stat-toggle" data-for="hstats-1-cont"></paper-toggle-button>
+      <div id="hstats-1-cont" style="display:none;">
+        <asq-text-input-q-stats id="hstats1" for="ti-1" style="height: 400px;"></asq-text-input-q-stats>
+      </div>
+    </div>
+
     <div class="flickr-credit">flickr@nasacommons</div>
    </div>
 
@@ -448,7 +455,7 @@ to advance a slide -->
 
 
 
-  <div id="asq-8" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="82" data-timer="60">
+  <div id="asq-8" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="82" data-timer="60">
        
   <asq-exercise style=" margin-top: 30px; height: 240px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
    <asq-stem>     
@@ -457,9 +464,21 @@ to advance a slide -->
     <asq-text-input-q id="ti-2">
     </asq-text-input-q>
    </asq-exercise>
-   <div style=" position: absolute; margin-top: 40px; height: 60px; margin-bottom: 100px;"><img src="img/asq-8a.jpg" height="200px" width="450px"><div class="flickr-credit">flickr@nasacommons</div></div>
-   <div style=" position: absolute; margin-top: 60px; height: 60px; margin-bottom: 100px; margin-left: 500px;"><img src="img/asq-8b.jpg" height="160px" width="300px"></div>
-    </div>
+
+  <div style="display:flex; margin-top: 40px;">
+    <img src="img/asq-8a.jpg" style="display:block; height:200px;">
+    <img src="img/asq-8b.jpg" style="display:block; height:160px; margin-left: 50px;">
+  </div>
+  
+  <div class="trans-white">
+      <paper-toggle-button class="h-stat-toggle" data-for="hstats-2-cont"></paper-toggle-button>
+      <div id="hstats-2-cont" style="display:none;">
+        <asq-text-input-q-stats id="hstats2" for="ti-2" style="height: 400px;"></asq-text-input-q-stats>
+      </div>
+  </div>
+
+  <div class="flickr-credit">flickr@nasacommons</div>
+</div>
 
    <div id="ti2-stats" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="83">
 
@@ -694,6 +713,7 @@ to advance a slide -->
 </div>
 <script src="frameworkData/impress.js"></script>
 <script src="frameworkData/main.js"></script>
+<script type="text/javascript" src="js/toggletistats.js"></script>
 <script src="bower_components/impress-step-timer/impress-step-timer.js"></script>
 <script type="text/javascript">
 
@@ -719,5 +739,5 @@ document.addEventListener("impress:substepenter", function (event){
             event.target.parentElement.querySelector(".pc img").src=event.target.getAttribute('data-bg-src');
         });
 
-    </script>
+</script>
 </body></html>

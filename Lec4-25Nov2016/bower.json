@@ -11,6 +11,7 @@
   "dependencies": {
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
     "webcomponentsjs": "*",
-    "impress-step-timer": "triglian/impress-step-timer"
+    "impress-step-timer": "triglian/impress-step-timer",
+    "paper-toggle-button": "PolymerElements/paper-toggle-button#^1.2.1"
   }
 }
