@@ -289,6 +289,9 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
+body[data-asq-role="viewer"] .image-link{
+  display: none;
+}
 .flex-cc .wrap{
   display: -webkit-box;
   display: -webkit-flex;
