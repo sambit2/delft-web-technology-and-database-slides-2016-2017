@@ -108,12 +108,26 @@ asq-sqlite-q{min-height: 650px; }
   border: 1px solid black;
   padding: 10px;
   width: 30%;
+  height: 13%;
+  background-color: blue;
+  position: absolute;
+  left: 120px
+}
+.boxed1 {
+  border: 1px solid black;
+  padding: 10px;
+  width: 30%;
   height: 10%;
   background-color: blue;
   position: absolute;
   left: 120px
 }
 .boxed div{
+  color: white;
+  font-family: monospace;
+  font-size: 8px;
+}
+.boxed1 div{
   color: white;
   font-family: monospace;
   font-size: 8px;
