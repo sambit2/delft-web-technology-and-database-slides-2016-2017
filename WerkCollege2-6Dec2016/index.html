@@ -1,0 +1,210 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>SQL exercises</title>
+
+  <meta name="description" content="This is a basic sample presentation showing the featues of ASQ" />
+  <meta name="author" content="Max von Bülow, Vasileios Triglianos" />
+
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
+  <link href="css/ASQBasicImpress.css" type="text/css" rel="stylesheet"/>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>  
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+  <!-- Use shadow dom -->
+  <script>
+    window.Polymer = window.Polymer || {};
+    window.Polymer.dom = 'shadow';
+  </script>
+
+  <link rel="import" href="bower_components/polymer/polymer.html"> 
+
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+  <link rel="import" href="bower_components/asq-canvas/asq-canvas.html">
+
+  <link href="bower_components/usi-web-atelier-slides-common/css/sunburst.css" rel="stylesheet">
+
+  <link rel="import" href="shared-styles.html">
+  <style is="custom-style" include="shared-styles"></style>
+  
+</head>
+
+<body class="impress-not-supported" data-asq-role="viewer">
+
+<!--   <asq-canvas></asq-canvas> -->
+
+  <div class="fallback-message">
+    <p>
+      Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+    </p>
+    <p>
+      For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+    </p>
+  </div>
+
+  <asq-settings max-num-submissions="-1" slideflow="ctrl" assessment="none"></asq-settings>
+
+
+  <div id="impress">
+
+    <div id="splash" class="step" data-x="0" data-y="0" data-scale="0.4" data-rotate="0">
+      <h1>SQL exercises</h1>
+      Please use Google Chrome <img src="img/chrome_icon.svg" style="position: relative; top: 10px; height: 50px;" alt="chrome icon"> on a PC
+      <hr />
+      <asq-welcome></asq-welcome>
+    </div>
+
+<div id="q1" class="step break" data-x="600" data-y="0" data-scale="0.4" data-rotate="0" data-timer="180">
+  <asq-exercise>
+    <asq-multi-choice-q>
+      <asq-stem><h5 style="margin:10px 0;">Ex.1 - Consider the <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">schema</a> of the Chinook database. Is it possible for albums not to be associated with tracks?</h5>
+      </asq-stem>
+      <asq-option name="a" correct>Yes, because the Album table has no attribute referencing the primary key of the Track table.</asq-option>
+      <asq-option name="b">No, because integrity constraints are bidirectional.</asq-option>
+      <asq-option name="c">No, because entity integrity constraints do not allow tables to have null values for foreign key attributes.</asq-option>
+      <asq-option name="d">Yes, the TrackId attribute of the Album table can be NULL.</asq-option>
+    </asq-multi-choice-q>
+  </asq-exercise>
+</div>
+
+
+<div id="q1-rating" class="print-hidden step break" data-x="1200" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+<div id="q2" class="step" data-x="1800" data-y="0" data-scale="0.4" data-rotate="0" data-timer="180">
+  <asq-exercise>
+    <asq-multi-choice-q>
+      <asq-stem><h5>Ex.2 - Consider the following query (The TIMESTAMPDIFF returns the difference in years between two dates. See <a href="http://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_timestampdiff" target="_blank">http://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_timestampdiff</a>). <br/> Which statement better describes the meaning of the query?</h5>
+      click <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">here</a> for the schema<br>
+      
+
+      <pre class="smallest"><code>SELECT c.FirstName, c.LastName, c.Country
+FROM Chinook.customer AS c, Chinook.employee AS e
+WHERE c.supportRepId = e.employeeId 
+AND TIMESTAMPDIFF(year, birthdate, hiredate) < 35</code></pre>
+
+      </asq-stem>
+      <asq-option name="a">List the names and the countries of those employees that took less than 35 years to answer a customers.</asq-option>
+      <asq-option name="b">List the names and the countries of those customers who are supported by an employee younger than 35.</asq-option>
+      <asq-option name="c" correct>List the names and the countries of those customers who are supported by an employee who was younger than 35 when hired.</asq-option>
+      <asq-option name="d">List the names and the countries of those customers who are supported by an employee hired less than 35 years ago.</asq-option>
+    </asq-multi-choice-q>
+  </asq-exercise>
+</div>
+
+
+<div id="q2-rating" class="print-hidden step break" data-x="2400" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+<div id="q3" class="step break" data-x="3000" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/imdb10000.sqlite" font-size="0.6em">
+    <asq-stem><h5 style="margin: 10px 0">Ex.3 - Retrieve the name of Artists that published an album having a 3-letter title that contains a 2-letters song</h5>click <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT DISTINCT Artist.Name
+FROM Artist JOIN Album ON Artist.ArtistId = Album.ArtistId
+JOIN Track ON Album.AlbumId = Track.AlbumId
+WHERE Album.Title LIKE "___" AND Track.Name LIKE "__"</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+
+<div id="q3-rating" class="print-hidden step break" data-x="3600" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h5 style="margin: 10px 0">How difficult did you consider the previous question to be?</h5></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+<div id="q4" class="step" data-x="4200" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
+    <asq-stem><h5 style="margin: 10px 0">Ex.4 - Retrieve the name of all the pair of artists that published an album containing the number 5 in the title</h5>click <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+      <asq-solution hidden>SELECT ar1.name, ar2.name
+FROM Album AS al1, Album AS al2, Artist AS ar1, Artist AS ar2
+WHERE al1.title LIKE "%5%" and  al2.title LIKE "%5%"
+AND al1.AlbumId < al2.AlbumId
+AND al1.ArtistId = ar1.ArtistId AND al2.ArtistId = ar2.ArtistId</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+
+<div id="q4-rating" class="print-hidden step break" data-x="4800" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+
+<div id="q5" class="step" data-x="5400" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
+    <asq-stem><h4>Ex.5 - Retrieve the name of composers of classical songs longer than 5 minutes</h4>click <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT DISTINCT Composer 
+FROM track JOIN Genre ON track.GenreId = Genre.GenreId 
+WHERE Genre.Name = "Classical" AND track.Milliseconds > 300000
+ORDER BY track.Milliseconds DESC</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+
+<div id="q5-rating" class="print-hidden step break" data-x="6000" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+<div id="survey" class="print-hidden step break" data-x="6600" data-y="0" data-scale="0.4" data-rotate="0">
+     Please fill in a survey on the usability of ASQ <a href="https://docs.google.com/forms/d/1I4GAXUyvbKu1WEYL_685As8cHIF4fC7Bz_JI-0uUrEQ/viewform" target="_blank">here</a><br>(It doesn't take more than 2 minutes!)
+</div> 
+
+  </div>
+
+  <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+  <script src="bower_components/svg-injector/dist/svg-injector.min.js"></script>
+  <script src="bower_components/asq-impress-js/js/impress.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/highlight.min.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/main.js"></script>
+  <script src="js/impress-step-timer.js"></script>
+  <script src="js/display-asq-solutions.js"></script>
+
+
+</body>
+</html>
+

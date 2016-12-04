@@ -1,0 +1,244 @@
+body pre {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  padding: 1px;
+  margin: 0;
+  border: 1px solid transparent
+}
+
+@media screen{
+  body pre {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 64px 8px rgba(168,191,230,0.5);
+  }
+}
+
+.step div.counter {
+  position: absolute;
+  top: -2em;
+  right: 1em;
+  font-size: 16px;
+  opacity: 0.3;
+  width: auto;
+}
+
+.step-timer{
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  left: calc(50% - 50px);
+  top: 0;
+  color:#FB8F19;
+}
+
+asq-canvas{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 1;
+  pointer-events: all;
+}
+
+asq-highlight-q, asq-fiddle-q {min-height: 700px; } 
+
+asq-text-input-q {display: flex; flex-direction:row; font-size: 0.9em;}
+
+asq-css-select-q {font-size: 0.75em;}
+
+asq-text-input-q-stats {min-height:300px;}
+
+asq-code-q{
+  height: 400px;
+}
+
+asq-order-q [target] {
+  min-height: 45px;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+
+}
+
+
+asq-order-q [target] > [object] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2px;
+}
+
+asq-order-q [object] {
+  cursor: pointer;
+  display: block;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #faebcc;
+  padding: 8px 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  max-width: 150px;
+  margin: 1px 5px;
+}
+
+asq-order[disabled] [object] {
+  cursor: auto;
+  color: white;
+  background-color: #666666;
+}
+
+asq-order-q img {
+  max-height: 350px;
+  margin: 1em;
+
+}
+
+.error-solution {
+  border-color: red;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(255, 6, 6, 0.075), 0 0 8px rgba(255, 0, 0, 1);
+}
+
+asq-buckets-q div[buckets] {
+  @apply(--layout-horizontal);
+  @apply(--layout-center-justified);
+  @apply(--layout-wrap);
+}
+
+asq-buckets-q div[bucket] {
+  @apply(--layout-vertical);
+  min-width: 200px;
+  min-height: 200px;
+  
+  border: 1px solid gray;
+  margin: 1px;
+
+  text-align: center;
+  border-radius: 5px;
+}
+
+asq-buckets-q div[bucket].over {
+  border: 1px dashed #000;
+  @apply(--shadow-elevation-3dp);
+}
+
+asq-buckets-q div[bucket] > strong {
+  background-color: #FFECB3;
+  /*color: #E6E6E6;*/
+  border-color: #405356;
+  padding: 10px 5px;
+
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+
+  /*@apply(--paper-font-title);*/
+
+}
+
+
+
+/*labels*/
+asq-buckets-q div[labels] {
+  @apply(--layout-horizontal);
+  @apply(--layout-center-justified);
+  @apply(--layout-wrap);
+}
+
+asq-buckets-q div[label] {
+  padding: 6px 12px;
+  margin-bottom: 0;
+  /*font-size: 14px;*/
+  font-weight: normal;
+  /*line-height: 1.42857143;*/
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  margin: 1px;
+}
+
+asq-buckets-q div[label].dragging {
+  opacity: 0.6;
+}
+
+
+asq-buckets-q [label].label-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+asq-buckets-q [label].label-primary:focus,
+asq-buckets-q [label].label-primary.focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+
+}
+asq-buckets-q [label].label-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+asq-buckets-q [label].label-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c; 
+}
+
+asq-buckets-q [label].label-success:focus,
+asq-buckets-q [label].label-success.focus {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #255625;
+}
+asq-buckets-q [label].label-success:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+
+@media screen {
+
+  asq-text-input-q {display: flex; flex-direction:row; font-size: 1em;}
+  asq-text-input-q-stats {min-height:300px;}
+
+  #asq-function-json2 asq-stem code {font-size:0.75em;}
+
+}
+
+@media print {
+
+  body{
+    background: transparent;
+  }
+
+  .print-hidden{
+    display: none;
+  }
+
+  div.step.break { page-break-before: always; }
+
+}
