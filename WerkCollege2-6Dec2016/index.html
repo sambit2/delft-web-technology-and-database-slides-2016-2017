@@ -118,7 +118,7 @@ AND TIMESTAMPDIFF(year, birthdate, hiredate) < 35</code></pre>
 
 <div id="q3" class="step break" data-x="3000" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
 <asq-exercise max-num-submissions="-1">
-  <asq-sqlite-q db-url="assets/imdb10000.sqlite" font-size="0.6em">
+  <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
     <asq-stem><h5 style="margin: 10px 0">Ex.3 - Retrieve the name of Artists that published an album having a 3-letter title that contains a 2-letters song</h5>click <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">here</a> for the schema<br></asq-stem>
     <code></code>
     <asq-solution hidden>SELECT DISTINCT Artist.Name
@@ -188,11 +188,137 @@ ORDER BY track.Milliseconds DESC</asq-solution>
     </asq-rating-q>
      <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
   </asq-exercise>
+</div>
+
+
+<div id="q6" class="step" data-x="6600" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/Chinook_Sqlite.sqlite" font-size="0.6em">
+    <asq-stem><h4>Ex.6 - Retrieve the name and surnames of the employees that directly report to the general managers.</h4>click <a href="http://lh4.ggpht.com/_oKo6zFhdD98/SWFPtyfHJFI/AAAAAAAAAMc/GdrlzeBNsZM/s800/ChinookDatabaseSchema1.1.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT E2.firstname, E2.lastname
+FROM Employee AS E1 INNER JOIN Employee AS E2
+ON E1.EmployeeId = E2.ReportsTo
+WHERE E1.ReportsTo IS NULL</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+<div id="q6-rating" class="print-hidden step break" data-x="7200" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div>
+
+<div id="imdb" class="step" data-x="7800" data-y="-1000" data-scale="0.4" data-rotate="0"><h2 style="text-align: center; font-size: 3em;">IMDB</h2></div>
+
+
+<div id="q7" class="step" data-x="7800" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/imdb10000.sqlite" font-size="0.6em">
+    <asq-stem><h4>Ex.7 - Find all years that have at least a movie containing the word "alien" in its title, and sort them in increasing order.</h4>click <a href="img/IMDB_Schema.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT distinct year
+FROM movies
+WHERE name LIKE "%alien%"
+ORDER BY year ASC</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+<div id="q7-rating" class="print-hidden step break" data-x="8400" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
 </div> 
 
-<div id="survey" class="print-hidden step break" data-x="6600" data-y="0" data-scale="0.4" data-rotate="0">
-     Please fill in a survey on the usability of ASQ <a href="https://docs.google.com/forms/d/1I4GAXUyvbKu1WEYL_685As8cHIF4fC7Bz_JI-0uUrEQ/viewform" target="_blank">here</a><br>(It doesn't take more than 2 minutes!)
+<div id="q8" class="step" data-x="9000" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/imdb10000.sqlite" font-size="0.6em">
+    <asq-stem><h4>Ex.8 - Find the titles of all movies directed by Steven Spielberg.</h4>click <a href="img/IMDB_Schema.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT DISTINCT name 
+FROM movies,movies_directors,directors
+WHERE movies.id = movies_directors.movie_id 
+AND directors.id = movies_directors.director_id
+AND directors.last_name = "Spielberg"</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+<div id="q8-rating" class="print-hidden step break" data-x="9600" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
 </div> 
+
+<div id="q9" class="step" data-x="10200" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/imdb10000.sqlite" font-size="0.6em">
+    <asq-stem><h4>Ex.9 - Find the name and surnames of all the actors that played the role of a "Host" in at least one movie.</h4>click <a href="img/IMDB_Schema.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT DISTINCT first_name, last_name
+FROM roles, actors 
+WHERE roles.actor_id = actors.id AND roles.role = "Host"</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+<div id="q9-rating" class="print-hidden step break" data-x="10800" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+<div id="q10" class="step" data-x="11400" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise max-num-submissions="-1">
+  <asq-sqlite-q db-url="assets/imdb10000.sqlite" font-size="0.6em">
+    <asq-stem><h4>Ex.10 - Find the name of directors that co-directed at least one movie containing the string "name" in the title.</h4>click <a href="img/IMDB_Schema.png" target="_blank">here</a> for the schema<br></asq-stem>
+    <code></code>
+    <asq-solution hidden>SELECT DISTINCT name, D1.last_name
+FROM movies, movies_directors AS MD1, movies_directors AS MD2,
+directors AS D1, directors AS D2
+WHERE movies.id = MD1.movie_id
+   AND movies.id = MD2.movie_id
+   AND D1.id = MD1.director_id
+   AND D2.id = MD2.director_id
+   AND MD1.director_id <> MD2.director_id 
+       AND name LIKE "%name%"</asq-solution>
+      </asq-sqlite-q>
+  </asq-exercise>
+</div>
+
+<div id="q10-rating" class="print-hidden step break" data-x="12000" data-y="0" data-scale="0.4" data-rotate="0">
+  <asq-exercise>
+    <asq-rating-q type="stars">
+      <asq-stem><h3>How difficult did you consider the previous question to be?</h3></asq-stem>
+       <asq-rating-item name="item-1"></asq-rating-item> Very Easy
+    </asq-rating-q>
+     <div class="smaller">(1 star: very difficult | 5 stars: very easy)</div>
+  </asq-exercise>
+</div> 
+
+
+
+<!-- <div id="survey" class="print-hidden step break" data-x="6600" data-y="0" data-scale="0.4" data-rotate="0">
+     Please fill in a survey on the usability of ASQ <a href="https://docs.google.com/forms/d/1I4GAXUyvbKu1WEYL_685As8cHIF4fC7Bz_JI-0uUrEQ/viewform" target="_blank">here</a><br>(It doesn't take more than 2 minutes!)
+</div>  -->
 
   </div>
 
