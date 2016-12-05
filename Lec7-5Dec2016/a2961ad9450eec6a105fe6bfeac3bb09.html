@@ -376,10 +376,69 @@ WHERE rank > 0
     </div>
 
 
-    <!-- asq-5 -->
+    <div id="asq-5" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="51" data-timer="90">
+    <div style="display: flex; margin-top: 10px;">
+        <asq-exercise style="padding: 10px 20px; background: rgba(255, 255, 255, 0.8); width: 1000px;">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q multi>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">Which of the following SQL queries are guaranteed to always produce a result-set containing ALL the tuples from the Movies table of the IMDB database?</h4></asq-stem>
+            <asq-option style="display: inline-block;" class="smaller" name="A.">1</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="B." correct>2</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="C.">3</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="D." correct>4</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+    </div>
+    <div style="display: flex; margin-top: 40px;">
+     <pre class="x-small trans" style="width: 450px; background-color: rgba(255, 255, 255, 0.8);"><code style="background-color: transparent;"><b>
+   SELECT DISTINCT name, year
+1) FROM imdb.movies
+   WHERE id IS NOT NULL
+</b></code></pre>
+<pre class="x-small trans" style="width: 450px; margin-left: 100px; background-color: rgba(255, 255, 255, 0.8);"><code style="background-color: transparent;"><b>
+   SELECT DISTINCT id, name
+2) FROM imdb.movies
+   WHERE id > 0
+</b></code></pre>
+      </div>
+    <div style="display: flex; margin-top: 20px;">
+<pre class="x-small trans" style="width: 450px; background-color: rgba(255, 255, 255, 0.8);"><code style="background-color: transparent;"><b>
+    SELECT DISTINCT name,year,rank
+3)  FROM imdb.movies
+</b></code></pre>
+<pre class="x-small trans" style="width: 450px; margin-left: 100px; background-color: rgba(255, 255, 255, 0.8);"><code style="background-color: transparent;"><b>
+   SELECT *
+4) FROM imdb.movies
+   WHERE name IS NOT NULL
+</b></code></pre>
+    </div>
+      <div class="flickr-credit">flickr@nasacommons</div>
+    </div>
 
 
-    <!--asq-6 <div id="pf52" class="pf w0 h0 step slide flash" data-page-no="52" data-x="0" data-y="0"><div class="pc pc34 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg34.png"><div class="t m0 xfe ha y1c ff3 fs6 fc2 sc0 ls0 ws24">Burst2_Q3</div></div></div> -->
+
+    <div id="asq-6" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="52" data-timer="120">
+       
+    <asq-exercise style=" margin-top: 90px; height: 300px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
+      <asq-stem>     
+        <h4 class="small">Write the SQL query that can support the following data need. [OPEN QUESTION]</h4>
+        <div class="smaller"><i>Retrieve the surname of female actors that have a first name containing the character ‘a’ at least 6 times</i></div>
+      </asq-stem>
+      <asq-text-input-q id="ti-2">
+  </asq-text-input-q>
+    </asq-exercise>
+    <div class="flickr-credit">flickr@nasacommons</div>
+   </div>
+
+   <div id="ti2-stats" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="52a">
+
+  <div style="margin-top: 20px; height: 150px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
+     <h4 class="small">Write the SQL query that can support the following data need. [OPEN QUESTION]</h4>
+    <div>
+        <asq-text-input-q-stats style="margin-top: 150px; height: 400px; background: rgba(255, 255, 255, 0.7); padding: 10px;" for="ti-2"></asq-text-input-q-stats>
+        </div>
+    </div>
+   </div>
 
 
     <div id="pf53" class="pf w0 h0 step slide flash" data-page-no="53" data-x="0" data-y="0"><div class="pc pc35 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg35.png"><div class="t m0 x124 h2b y27 ff3 fs1c fc2 sc0 ls0 ws1">Or<span class="_ _5"></span>dering of Results</div></div></div>
@@ -473,9 +532,62 @@ AND a.actor_id = 393411
       <div class="flickr-credit">flickr@nasacommons</div>
     </div>
 
+<div id="asq-8" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="71" data-timer="180">
+    <div style="display: flex; margin-top: 20px;">
+         <div class="small" style="background-color: rgba(255, 255, 255, 0.8); padding: 10px;"><h4>Consider the query from the previous exercise (1) and the following query. Are the two queries returning the same set of results?</h4></div>
+    </div>
+      <div style="display: flex; margin-top: 20px;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8);"><code style="background-color: transparent;"><b>
+SELECT DISTINCT b.actor_id
+FROM imdb.roles AS a,imdb.roles AS b
+WHERE a.actor_id <> b.actor_id
+  AND a.actor_id = 393411
+</b></code></pre>
+      </div>
 
+      <asq-exercise style="margin-top: 20px; height: 200px; padding: 10px 20px; background: rgba(255, 255, 255, 0.8);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2; display: none">Consider the query from the previous exercise (1) and the following query. Are the two queries returning the same set of results?</h4></asq-stem>
+            <asq-option class="smaller" style="" name="A.">Yes</asq-option>
+            <asq-option class="smaller" style="margin-top: 20px;" name="B." correct>No</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@nasacommons</div>
+    </div>
 
-    <div id="asq-8" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="71" data-timer="30">
+    <div id="asq-9" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="72" data-timer="90">
+       
+    <asq-exercise style=" margin-top: 90px; height: 250px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
+      <asq-stem>     
+        <h4 class="small">Why is the following query taking a long time to return results? [open question]</h4>
+      </asq-stem>
+      <asq-text-input-q id="ti-3">
+  </asq-text-input-q>
+    </asq-exercise>
+    <div style="display: flex; margin-top: 20px;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8);"><code style="background-color: transparent;"><b>
+SELECT DISTINCT b.actor_id
+FROM imdb.roles AS a,imdb.roles AS b
+WHERE a.actor_id <> b.actor_id
+  AND a.actor_id = 393411
+</b></code></pre>
+      </div>
+    <div class="flickr-credit">flickr@nasacommons</div>
+   </div>
+
+   <div id="ti3-stats" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="72a">
+
+  <div style="margin-top: 20px; height: 150px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
+     <h4 class="small">Why is the following query taking a long time to return results? [open question]</h4>
+     <div>
+        <asq-text-input-q-stats style="margin-top: 150px; height: 400px; background: rgba(255, 255, 255, 0.7); padding: 10px;" for="ti-3"></asq-text-input-q-stats>
+        </div>
+    </div>
+   </div>
+
+    <div id="asq-10" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="72aa" data-timer="30">
        
     <asq-exercise style=" margin-top: 90px; height: 300px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
       <asq-stem>     
@@ -487,7 +599,7 @@ AND a.actor_id = 393411
     <div class="flickr-credit">flickr@nasacommons</div>
    </div>
 
-   <div id="ti1-stats" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="71a">
+   <div id="ti1-stats" class="step flash flex-cc slide" data-x="0" data-y="0" data-page-no="72ab">
 
   <div style="margin-top: 20px; height: 150px; background: rgba(255, 255, 255, 0.7); padding: 10px;">
      <h4 class="small">[BONUS] Who is actor 393411?</h4>

@@ -219,11 +219,15 @@ asq-sqlite-q{min-height: 650px; }
   background-size: cover;
 }
 #ti1-stats{
-  background-image: url('../img/asq-8.jpg');
+  background-image: url('../img/asq-10.jpg');
   background-size: cover;
 }
 #ti2-stats{
-  background-image: url('../img/asq-8.jpg');
+  background-image: url('../img/asq-6.jpg');
+  background-size: cover;
+}
+#ti3-stats{
+  background-image: url('../img/asq-9.jpg');
   background-size: cover;
 }
 table, th, td {
