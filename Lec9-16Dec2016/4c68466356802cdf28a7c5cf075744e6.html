@@ -141,6 +141,22 @@ to advance a slide -->
     <div id="pf22" class="pf w0 h0 step slide flash" data-page-no="22" data-x="0" data-y="0"><div class="pc pc15 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg16.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">Ajax:<span class="_ _4"></span> an <span class="fcb ws8">asynchr<span class="_ _5"></span>onous<span class="fc2 ws1"> r<span class="_ _2"></span>equest</span></span></div><div class="t m0 x26 ha yd ff2 fs4 fc2 sc0 ls0">12</div><div class="t m0 x2c hd y12 ff4 fs3 fc5 sc0 ls3 ws1">  1 <span class="fc2">var ajax = <span class="ff5 ws4">new</span><span class="ls4"> </span><span class="fc8 ws4">XMLHttpRequest</span>();</span></div><div class="t m0 x2c hd y13 ff4 fs3 fc5 sc0 ls3 ws1">  2 </div><div class="t m0 x2c hd y14 ff4 fs3 fc5 sc0 ls3 ws1">  3 <span class="ff6 fca">                                 data has</span></div><div class="t m0 x2c hd y15 ff4 fs3 fc5 sc0 ls3 ws1">  4 <span class="ff6 fca">       </span></div><div class="t m0 x2c hd y16 ff4 fs3 fc5 sc0 ls3 ws1">  5 <span class="fc2">ajax.onreadystatechange = <span class="fc8 ws4">function</span>() {</span></div><div class="t m0 x2c hd y17 ff4 fs3 fc5 sc0 ls3 ws1">  6 </div><div class="t m0 x2c hd y18 ff4 fs3 fc5 sc0 ls3 ws1">  7 <span class="fc2">   <span class="ff6 fca">//the only state we care about</span></span></div><div class="t m0 x2c hd y19 ff4 fs3 fc5 sc0 ls3 ws1">  8 <span class="fc2">   <span class="ff5 ws4">if<span class="ff4">(ajax.readyState==<span class="fcc ls4">4</span></span></span>) {</span></div><div class="t m0 x2c hd y1a ff4 fs3 fc5 sc0 ls3 ws1">  9 <span class="fc2">      <span class="ff6 fca">/*</span></span></div><div class="t m0 x2c hd y1b ff4 fs3 fc5 sc0 ls3 ws1"> 10 <span class="ff6 fca">       * process received data</span></div><div class="t m0 x2c hd y1c ff4 fs3 fc5 sc0 ls3 ws1"> 11 <span class="ff6 fca">       */</span></div><div class="t m0 x2c hd y1d ff4 fs3 fc5 sc0 ls3 ws1"> 12 <span class="fc2">   }</span></div><div class="t m0 x2c hd y1e ff4 fs3 fc5 sc0 ls3 ws1"> 13 <span class="fc2">}; <span class="ff6 fca">//end of function </span></span></div><div class="t m0 x2c hd y1f ff4 fs3 fc5 sc0 ls3 ws1"> 14 </div><div class="t m0 x2c hd y20 ff4 fs3 fc5 sc0 ls3 ws1"> 15 <span class="fc2 ws4">ajax.<span class="fc8">open</span><span class="ls4">(</span><span class="fc7">&quot;GET&quot;</span><span class="ws1">, </span><span class="fc7">&quot;url&quot;</span><span class="ws1">, true); <span class="ff6 fca">//true indicates </span></span></span></div><div class="t m0 x2c hd y21 ff4 fs3 fc5 sc0 ls3 ws1"> 16 <span class="ff6 fca">                               //asynchronous request</span></div><div class="t m0 x2c hd y22 ff4 fs3 fc5 sc0 ls3 ws1"> 17 </div><div class="t m0 x2c hd y23 ff4 fs3 fc5 sc0 ls3 ws1"> 18 <span class="fc2 ws4">ajax.<span class="fc8">send</span>(null);</span></div><div class="c x2a y6d w8 h1d"><div class="t m2 x2b hf y6e ff2 fs6 fc1 sc0 ls0 ws1">plain JS</div></div><div class="c x2d y6f w9 h10"><div class="t m0 x2e hc y70 ff2 fs3 fc1 sc0 ls0 ws1">event <span class="ff4 ls3 ws4">onreadystatechange</span> is fir<span class="_ _0"></span>ed </div><div class="t m0 x2f hc y71 ff2 fs3 fc1 sc0 ls0 ws1">when the status of the r<span class="_ _0"></span>equest changes.</div></div></div></div>
 
 
+    <div id="asq-1" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="22a" data-timer="30">
+      <h4 class="small" style="background: rgba(255, 255, 255, 0.7); height: 50px; padding: 20px 20px;">What does the “same-origin” policy refer to?</h4>
+            
+      <asq-exercise style="height: 300px; padding: 20px 20px; background: rgba(255, 255, 255, 0.7);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 style="display: none;">What does the “same-origin” policy refer to?</h4></asq-stem>
+            <asq-option class="smaller" name="A.">A Web server permits scripts contained in page A to access data contained in page B only if they originate from the same client</asq-option>
+            <asq-option class="smaller" name="B." correct>A Web browser permits scripts contained in page A to access data contained in page B only if they originate from the same serverside component</asq-option>
+            <asq-option class="smaller" name="C.">A Web browser permits a Web server running on a URI scheme/hostname/port to only access data from a server running on the same host (on a different port)</asq-option>
+            <asq-option class="smaller" name="D.">A Web server permits browsers A and B to exchange data only if they originate from the same client</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      <div class="flickr-credit">flickr@johnnylcy</div>
+    </div>
+
 
     <div id="pf23" class="pf w0 h0 step slide flash" data-page-no="23" data-x="0" data-y="0"><div class="pc pc17 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg17.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">Ajax security</div><div class="t m0 x21 h1b y72 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Conveniently we always r<span class="_ _0"></span>equested data fr<span class="_ _0"></span>om &quot;our&quot; W<span class="_ _0"></span>eb </span></div><div class="t m0 x24 h2 y73 ff2 fs0 fc2 sc0 ls0 ws1">server </div><div class="t m0 x21 h5 y74 ff2 fs3 fc2 sc0 ls1">•<span class="ff1 fs0 fc9 ls0 ws1 v1">Security restriction of <span class="_ _2"></span>Ajax<span class="ff2 fc2">: can only fetch files fr<span class="_ _0"></span>om the </span></span></div><div class="t m0 x24 h2 y75 ff2 fs0 fc2 sc0 ls0 ws1">same W<span class="_ _0"></span>eb server as the calling page (<span class="ff7">Same-origin policy</span>) </div><div class="t m0 x23 h1e y76 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Same origin when pr<span class="_ _0"></span>otocol, por<span class="_ _9"></span>t, and host ar<span class="_ _0"></span>e the same </span></div><div class="t m0 x2c h2 y77 ff2 fs0 fc2 sc0 ls0 ws1">for two pages </div><div class="t m0 x21 h6 y78 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Ajax <span class="ff1 fc9 ls8 ws9">cannot</span> be executed fr<span class="_ _0"></span>om a W<span class="_ _0"></span>eb page stor<span class="_ _0"></span>ed locally </span></div><div class="t m0 x24 h2 y79 ff2 fs0 fc2 sc0 ls0 ws1">on disk</div><div class="t m0 x26 ha yd ff2 fs4 fc2 sc0 ls0">13</div></div></div>
 
@@ -168,7 +184,108 @@ to advance a slide -->
     <div id="pf31" class="pf w0 h0 step slide flash" data-page-no="31" data-x="0" data-y="0"><div class="pc pc1d w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg1f.png"><div class="t m0 x26 ha yd ff2 fs4 fc2 sc0 ls0">18</div><div class="t m0 x37 h27 y8d ff4 fsb fc1 sc0 lsa ws1">npm list</div></div></div>
 
     
-    <!-- asq-2 <div id="pf32" class="pf w0 h0 step slide flash" data-page-no="32" data-x="0" data-y="0"><div class="pc pc20 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg20.png"></div></div> -->
+    <div id="asq-mark" class="flash step break flex-cc" data-x="0" data-y="0" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise>
+  <asq-highlight-q theme="" mode="javascript" font-size="0.55em">
+    <asq-solution>{
+  "5cb85c": [
+    {
+      "start": {
+        "row": 0,
+        "column": 0
+      },
+      "end": {
+        "row": 0,
+        "column": 27
+      },
+      "id": 67
+    },
+    {
+      "start": {
+        "row": 2,
+        "column": 0
+      },
+      "end": {
+        "row": 2,
+        "column": 17
+      },
+      "id": 145
+    },
+    {
+      "start": {
+        "row": 3,
+        "column": 2
+      },
+      "end": {
+        "row": 3,
+        "column": 12
+      },
+      "id": 222
+    },
+    {
+      "start": {
+        "row": 4,
+        "column": 4
+      },
+      "end": {
+        "row": 5,
+        "column": 27
+      },
+      "id": 273
+    },
+    {
+      "start": {
+        "row": 9,
+        "column": 0
+      },
+      "end": {
+        "row": 9,
+        "column": 56
+      },
+      "id": 89
+    }
+  ],
+  "ffd700": [
+    {
+      "start": {
+        "row": 2,
+        "column": 18
+      },
+      "end": {
+        "row": 2,
+        "column": 39
+      },
+      "id": 177
+    },
+    {
+      "start": {
+        "row": 3,
+        "column": 13
+      },
+      "end": {
+        "row": 3,
+        "column": 26
+      },
+      "id": 244
+    }
+  ]
+}</asq-solution>
+    <asq-stem>Highlight</asq-stem>
+    <asq-hl-color-task color="ffd700" colorName="ffd700">Asynchronous</asq-hl-color-task>
+    <asq-hl-color-task color="5cb85c" colorName="5cb85c">Synchronous</asq-hl-color-task>
+    <code>var http = require('http');
+
+http.createServer(function (req, res) {
+  setTimeout(function () {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World');
+  }, 2000);
+}).listen(8000);
+
+console.log('Server running at http://127.0.0.1:8000/');</code>
+  </asq-highlight-q>
+</asq-exercise>
+</div>
 
     <div id="pf33" class="pf w0 h0 step slide flash" data-page-no="33" data-x="0" data-y="0"><div class="pc pc20 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg21.png"><div class="t m0 x6 h4 y85 ff3 fs2 fc2 sc0 ls0 ws1">A file-based module system</div></div></div>
 
@@ -232,8 +349,6 @@ to advance a slide -->
 </div></div>-->
 
 
-    <!--asq-3 <div id="pf52" class="pf w0 h0 step slide flash" data-page-no="34" data-x="0" data-y="0"><div class="pc pc34 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg34.png"></div></div>-->
-
     <div id="pf53" class="pf w0 h0 step slide flash" data-page-no="53" data-x="0" data-y="0"><div class="pc pc34 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg35.png"><div class="t m0 x6 h37 y85 ff4 fs2 fc2 sc0 ls14">require()</div>
 <div class="t m0 x31 h38 yc1 ff2 fs11 fc2 sc0 ls11">•<span class="ff4 fs12 ls12 ws1 v3">require() <span class="ff2 ls0">is blocking</span></span></div>
 <div class="t m0 x31 h39 yc2 ff2 fs11 fc2 sc0 ls11">•<span class="fs12 ls0 ws1 v1">module.expor<span class="_ _9"></span>ts is <span class="ff1 fc9 ls13 wsd">cached</span>, i.e. the first time </span></div>
@@ -249,6 +364,41 @@ to advance a slide -->
 <div class="c x4e yc6 w15 h3c"><div class="t m0 x49 hd yc7 ff5 fs3 fc2 sc0 ls3 ws4">var<span class="ff4 ws1"> t1 = </span>new<span class="ff4 ws1"> <span class="fc8 ws4">Date<span class="fc2">().</span>getTime</span>();</span></div><div class="t m0 x49 hd yc8 ff5 fs3 fc2 sc0 ls3 ws4">var<span class="ff4 ws1"> foo1 = <span class="fc8 ws4">require</span><span class="ls4">(</span><span class="fc7 ws4">&apos;./foo&apos;</span>);</span></div><div class="t m0 x49 hd yc9 ff4 fs3 fc2 sc0 ls3 ws4">console.<span class="fc8">log</span><span class="ls4">(</span><span class="ff5">new</span><span class="ls4 ws1"> </span><span class="fc8">Date</span>().<span class="fc8">getTime</span><span class="ws1">() - t1); <span class="ff6 fca">// &gt; 0</span></span></div><div class="t m0 x49 hd yca ff5 fs3 fc2 sc0 ls3 ws4">var<span class="ff4 ws1"> t2 = </span>new<span class="ff4 ws1"> <span class="fc8 ws4">Date<span class="fc2">().</span>getTime</span>();</span></div><div class="t m0 x49 hd ycb ff5 fs3 fc2 sc0 ls3 ws4">var<span class="ff4 ws1"> foo2 = <span class="fc8 ws4">require</span><span class="ls4">(</span><span class="fc7 ws4">&apos;./foo&apos;</span>);</span></div><div class="t m0 x49 hd ycc ff4 fs3 fc2 sc0 ls3 ws4">console.<span class="fc8">log</span><span class="ls4">(</span><span class="ff5">new</span><span class="ls4 ws1"> </span><span class="fc8">Date</span>().<span class="fc8">getTime</span><span class="ws1">() - t2); <span class="ff6 fca">// approx 0</span></span></div></div></div></div>
 
 
+<div id="asq-3" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="54a" data-timer="60">
+    <div style="display: flex; margin-top: 20px;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px;"><code style="background-color: transparent;"><b>
+                   module.exports.pi = 3.1415;
+<span style="color: blue;">constants.js</span>       module.exports.one = 1;
+                   module.exports.login = "root";
+                   module.exports.password = "root";
+</b></code></pre>
+      </div>
+      <div style="display: flex; margin-top: 20px;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px;"><code style="background-color: transparent;"><b>
+                   var constants1 = require('./constants');
+                   constants1.password = "admin";
+                   var constants2 = require('./constants');
+<span style="color: blue;">bar.js</span>             console.log(constants2.password);
+                   var constants3 = require('./constants');
+                   constants2.pi = 3;
+                   console.log(constants3.pi);
+</b></code></pre>
+      </div>
+
+      <asq-exercise style="margin-top: 20px; height: 150px; padding: 10px 20px; background: rgba(255, 255, 255, 0.8);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">What is the console output of node bar.js?</h4></asq-stem>
+            <asq-option style="display: inline-block;" class="smaller" name="A." correct>admin/3</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="B.">root/2</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="C.">admin/3.1415</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="D.">root/3</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@lidok</div>
+    </div>
+
 
     <div id="pf55" class="pf w0 h0 step slide flash" data-page-no="55" data-x="0" data-y="0"><div class="pc pc37 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg37.png"><div class="t m0 x6 h37 y85 ff4 fs2 fc2 sc0 ls14">module.exports</div><div class="t m0 x31 h38 yc1 ff2 fs11 fc2 sc0 ls11">•<span class="ff4 fs12 ls12 wse v3">module.exports={}</span><span class="fs12 ls0 ws1 v3"> is implicitly pr<span class="_ _0"></span>esent in ever<span class="_ _9"></span>y </span></div><div class="t m0 x4d h3a ycd ff2 fs12 fc2 sc0 ls0 ws1">node.js file (a new empty object) </div><div class="t m0 x31 h3d yce ff2 fs11 fc2 sc0 ls11">•<span class="fs12 ls0 ws1 v3">node.js pr<span class="_ _0"></span>ovides an alias: <span class="ff4 ls12">exports = module.exports</span></span></div></div></div>
 
@@ -260,8 +410,96 @@ to advance a slide -->
 
     <div id="pf57" class="pf w0 h0 step slide flash" data-page-no="57" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg39.png"><div class="t m0 x6 h37 y85 ff4 fs2 fc2 sc0 ls14">module.exports</div><div class="t m0 x31 h3f yd8 ff2 fs13 fc2 sc0 ls15">•<span class="ff4 fs14 ls16 wsf v3">module.exports={}</span><span class="fs14 ls0 ws1 v3"> is implicitly pr<span class="_ _0"></span>esent in ever<span class="_ _9"></span>y </span></div><div class="t m0 x4d h40 yd9 ff2 fs14 fc2 sc0 ls0 ws1">node.js file (a new empty object) </div><div class="t m0 x31 h41 yda ff2 fs13 fc2 sc0 ls15">•<span class="fs14 ls0 ws1 v1">node.js pr<span class="_ _0"></span>ovides an alias: <span class="ff4 ls16">exports = module.exports</span></span></div><div class="t m0 x31 h42 ydb ff2 fs13 fc2 sc0 ls15">•<span class="fs14 ls0 ws1 v3">Impor<span class="_ _9"></span>tant: do <span class="ff1 fc9 ls19 ws10">not</span><span class="ls17"> <span class="ff1 fc9 ls18 ws11">assign</span></span> to <span class="ff4 ls16">exports </span>dir<span class="_ _0"></span>ectly<span class="_ _f"></span>, <span class="ff1 fc9 ws12">attach</span> to it </span></div><div class="t m0 x4d h40 ydc ff2 fs14 fc2 sc0 ls0 ws1">instead (otherwise the r<span class="_ _0"></span>efer<span class="_ _0"></span>ence to <span class="ff4 ls16 wsf">module.exports</span> is </div><div class="t m0 x4d h40 ydd ff2 fs14 fc2 sc0 ls0 ws1">br<span class="_ _0"></span>oken); assign only to <span class="ff4 ls16">module.exports</span></div><div class="c x18 ycf w16 h3c"><div class="t m0 x49 hd yd0 ff4 fs3 fc2 sc0 ls3 ws1">module.exports.foo = <span class="ff5 ws4">function</span> () {</div><div class="t m0 x49 hd yd1 ff4 fs3 fc2 sc0 ls3 ws1">    console.<span class="fc8 ws4">log</span><span class="ls4">(</span><span class="fc7">&apos;foo called&apos;</span>);</div><div class="t m0 x49 hd yd2 ff4 fs3 fc2 sc0 ls3">};</div><div class="t m0 x49 hd yd3 ff4 fs3 fc2 sc0 ls3 ws1">module.exports.bar = <span class="ff5 ws4">function</span> () {</div><div class="t m0 x49 hd yd4 ff4 fs3 fc2 sc0 ls3 ws1">    console.<span class="fc8 ws4">log</span><span class="ls4">(</span><span class="fc7">&apos;bar called&apos;</span>);</div><div class="t m0 x49 hd yd5 ff4 fs3 fc2 sc0 ls3">};</div></div><div class="c x4f ycf w17 h3c"><div class="t m0 x49 hd yd0 ff4 fs3 fc2 sc0 ls3 ws1">exports.foo = <span class="ff5 ws4">function</span> () {</div><div class="t m0 x49 hd yd1 ff4 fs3 fc2 sc0 ls3 ws1">    console.<span class="fc8 ws4">log</span><span class="ls4">(</span><span class="fc7">&apos;foo called&apos;</span>);</div><div class="t m0 x49 hd yd2 ff4 fs3 fc2 sc0 ls3">};</div><div class="t m0 x49 hd yd3 ff4 fs3 fc2 sc0 ls3 ws1">exports.bar = <span class="ff5 ws4">function</span> () {</div><div class="t m0 x49 hd yd4 ff4 fs3 fc2 sc0 ls3 ws1">    console.<span class="fc8 ws4">log</span><span class="ls4">(</span><span class="fc7">&apos;bar called&apos;</span>);</div><div class="t m0 x49 hd yd5 ff4 fs3 fc2 sc0 ls3">};</div></div><div class="c x50 yd6 w18 h3e"><div class="t m0 x1e h11 yd7 ff1 fs3 fc1 sc0 ls6">equivalent</div></div></div></div>
 
+    <div id="asq-4" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="57aa" data-timer="60">
+    <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px;"><code style="background-color: transparent;"><b>
+                          exports = function() {
+                            return {
+                              pi: 3.1415,
+<span style="color: blue;">constants.js</span>                  one: 1,
+                              login: "root",
+                              password: "root"
+                            }
+                          };
+</b></code></pre>
+      </div>
+      <div style="display: flex; margin-top: 10px;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px;"><code style="background-color: transparent;"><b>
+                          var constants1 = require('./constants');
+                          console.log(constants1);
+ <span style="color: blue;">bar.js</span>                   constants1["password"] = "admin";
+                          var constants2 = require('./constants');
+                          console.log(constants2["password"]);
+</b></code></pre>
+      </div>
 
-    <!-- asq-4 <div id="pf58" class="pf w0 h0 step slide flash" data-page-no="58" data-x="0" data-y="0"><div class="pc pc3a w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg3a.png"></div></div>-->
+      <asq-exercise style="margin-top: 10px; height: 300px; padding: 10px 20px; background: rgba(255, 255, 255, 0.8);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">What is the console output of node bar.js?</h4></asq-stem>
+            <asq-option class="smaller" style="" name="A.">{ pi: 3.1415, one: 1, login: "root", password: "root"}  /  admin</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="B.">{ pi: 3.1415, one: 1, login: "root", password: "root"}  /  {}</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="C.">{}  /  {}</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="D." correct>{}  /  admin</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@lidok</div>
+    </div>
+
+    <div id="pf57a" class="pf w0 h0 step slide flash" data-page-no="57a" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/1.jpg"></div></div>
+
+    <div id="pf57b" class="pf w0 h0 step slide flash" data-page-no="57b" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/2.jpg"></div></div>
+
+    <div id="pf57c" class="pf w0 h0 step slide flash" data-page-no="57c" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/3.jpg"></div></div>
+
+    <div id="pf57d" class="pf w0 h0 step slide flash" data-page-no="57d" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/4.jpg"></div></div>
+
+    <div id="pf57e" class="pf w0 h0 step slide flash" data-page-no="57e" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/5.jpg"></div></div>
+
+    <div id="pf57f" class="pf w0 h0 step slide flash" data-page-no="57f" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/6.jpg"></div></div>
+
+    <div id="pf57g" class="pf w0 h0 step slide flash" data-page-no="57g" data-x="0" data-y="0"><div class="pc pc39 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/7.jpg"></div></div>
+
+
+    <div id="asq-5" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="57ga" data-timer="60">
+    <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px;"><code style="background-color: transparent;"><b>
+                          exports = function() {
+                            return {
+                              pi: 3.1415,
+<span style="color: blue;">constants.js</span>                  one: 1,
+                              login: "root",
+                              password: "root"
+                            }
+                          };
+</b></code></pre>
+      </div>
+      <div style="display: flex; margin-top: 10px;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px;"><code style="background-color: transparent;"><b>
+                          var constants1 = require('./constants')();
+                          constants1["password"] = "admin";
+                          var constants2 = require('./constants')();
+<span style="color: blue;">bar.js</span>                    console.log(constants2["password"]);
+                          var constants3 = require('./constants')();
+                          constants2["pi"] = 3;
+                          console.log(constants3["pi"]);
+</b></code></pre>
+      </div>
+
+      <asq-exercise style="margin-top: 10px; height: 150px; padding: 10px 20px; background: rgba(255, 255, 255, 0.8);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">What is the console output of node bar.js?</h4></asq-stem>
+            <asq-option style="display: inline-block;" class="smaller" name="A.">root/3</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="B.">admin/3.1415</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="C." correct>root/3.1415</asq-option>
+     <asq-option style="display: inline-block; margin-left: 60px;" class="smaller" name="D.">admin/3</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@rennac</div>
+    </div>
 
     <div id="pf59" class="pf w0 h0 step slide flash" data-page-no="59" data-x="0" data-y="0"><div class="pc pc3a w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg3b.png"><div class="t m0 x51 hb y7e ff3 fs5 fc2 sc0 ls0 ws1">Expr<span class="_ _5"></span>ess and Connect</div></div></div>
 
@@ -512,6 +750,28 @@ to advance a slide -->
 <div class="t m0 x60 hd y131 ff4 fs3 fc2 sc0 ls3">});</div><div class="c x0 y132 w1e h5e"><div class="t m0 x1b hc y133 ff2 fs3 fc1 sc0 ls0 ws1">T<span class="_ _11"></span>wo r<span class="_ _0"></span>oute handlers </div><div class="t m0 x1b hc y134 ff2 fs3 fc1 sc0 ls0 ws1">defined for a r<span class="_ _0"></span>oute</div></div><div class="c x62 y135 w1f h5f"><div class="t m0 x18 hc y136 ff2 fs3 fc2 sc0 ls0 ws1">half the r<span class="_ _0"></span>equests will move on</div></div></div></div>
 
 
+<div id="asq-6" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="105a" data-timer="60">
+    <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px; margin-top: 20px;"><code style="background-color: transparent;"><b>
+        app.get('/user(name)?s?', function(req,res){
+          res.send(…)
+        });
+</b></code></pre>
+      </div>
+      <asq-exercise style="margin-top: 40px; height: 300px; padding: 10px 20px; background: rgba(255, 255, 255, 0.8);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">Which route does this handler <u>not</u> match?</h4></asq-stem>
+            <asq-option class="smaller" style="" name="A.">/Users</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="B.">/user</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="C.">/usernames</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="D." correct>/usersname</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@105567585@N06</div>
+    </div>
+
 
     <div id="pf106" class="pf w0 h0 step slide flash" data-page-no="106" data-x="0" data-y="0"><div class="pc pc6a w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg6a.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">Routes and Expr<span class="_ _2"></span>ess</div><div class="t m0 x2d hd y137 ff6 fs3 fca sc0 ls3 ws1">//A-B-C testing</div><div class="t m0 x2d hd y138 ff4 fs3 fc2 sc0 ls3 ws4">app.<span class="fc8">get</span>(<span class="fc7">&apos;/todos&apos;</span><span class="ls0">,</span></div><div class="t m0 x63 hd y139 ff5 fs3 fc2 sc0 ls3 ws4">function<span class="ff4 ws1">(req,res, next){</span></div><div class="t m0 x64 hd y13a ff5 fs3 fc2 sc0 ls3 ws4">if<span class="ff4 ws1"> (Math.<span class="fc8 ws4">random</span>() &lt; <span class="fcc ws4">0.33</span>) {</span></div><div class="t m0 x65 hd y13b ff5 fs3 fc2 sc0 ls3 ws4">return<span class="ff4 ls4 ws1"> </span><span class="ff4 fc8">next<span class="fc2">();</span></span></div><div class="t m0 x64 hd y13c ff4 fs3 fc2 sc0 ls0">}</div><div class="t m0 x64 hd y13d ff4 fs3 fc2 sc0 ls3 ws4">console.<span class="fc8">log</span><span class="ls4">(</span><span class="fc7 ws1">&quot;Todos in schema A returned&quot;</span>);</div><div class="t m0 x64 hd y13e ff4 fs3 fc2 sc0 ls3 ws4">res.<span class="fc8">json</span>(todosA);</div><div class="t m0 x63 hd y75 ff4 fs3 fc2 sc0 ls3">},</div><div class="t m0 x63 hd y13f ff5 fs3 fc2 sc0 ls3 ws4">function<span class="ff4 ws1">(req,res, next){</span></div><div class="t m0 x64 hd y140 ff5 fs3 fc2 sc0 ls3 ws4">if<span class="ff4 ws1"> (Math.<span class="fc8 ws4">random</span>() &lt; <span class="fcc ws4">0.5</span>) {</span></div><div class="t m0 x65 hd y141 ff5 fs3 fc2 sc0 ls3 ws4">return<span class="ff4 ls4 ws1"> </span><span class="ff4 fc8">next<span class="fc2">();</span></span></div><div class="t m0 x64 hd y142 ff4 fs3 fc2 sc0 ls0">}</div><div class="t m0 x64 hd y143 ff4 fs3 fc2 sc0 ls3 ws4">console.<span class="fc8">log</span><span class="ls4">(</span><span class="fc7 ws1">&quot;Todos in schema B returned&quot;</span>);</div><div class="t m0 x64 hd y144 ff4 fs3 fc2 sc0 ls3 ws4">res.<span class="fc8">json</span>(todosB);</div><div class="t m0 x63 hd y145 ff4 fs3 fc2 sc0 ls3">},</div><div class="t m0 x63 hd y146 ff5 fs3 fc2 sc0 ls3 ws4">function<span class="ff4">(req,res){</span></div><div class="t m0 x64 hd y147 ff4 fs3 fc2 sc0 ls3 ws4">console.<span class="fc8">log</span><span class="ls4">(</span><span class="fc7 ws1">&quot;Todos in schema C returned&quot;</span>);</div><div class="t m0 x64 hd y148 ff4 fs3 fc2 sc0 ls3 ws4">res.<span class="fc8">json</span>(todosC);</div><div class="t m0 x63 hd y149 ff4 fs3 fc2 sc0 ls0">}</div><div class="t m0 x2d hd y14a ff4 fs3 fc2 sc0 ls3">);</div></div></div>
 
@@ -546,7 +806,27 @@ to advance a slide -->
     <div id="pf118" class="pf w0 h0 step slide flash" data-page-no="118" data-x="0" data-y="0"><div class="pc pc73 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg76.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">Routing parameters</div><div class="t m0 x26 ha yd ff2 fs4 fc2 sc0 ls0">46</div><div class="t m0 x4d hd y170 ff5 fs3 fc2 sc0 ls3 ws4">var<span class="ff4 ws1"> todoTypes = {</span></div><div class="t m0 x2c hd y171 ff4 fs3 fc2 sc0 ls3 ws1">important: {</div><div class="t m0 x6e hd y172 ff4 fs3 fc2 sc0 ls3 ws1">today: [<span class="fc7 ws4">&quot;TI1506&quot;</span>],</div><div class="t m0 x6e hd y173 ff4 fs3 fc2 sc0 ls3 ws1">tomorrow: [<span class="fc7 ws4">&quot;OOP&quot;</span>, <span class="fc7 ws4">&quot;Calculus&quot;</span><span class="ls0">]</span></div><div class="t m0 x2c hd y174 ff4 fs3 fc2 sc0 ls3">},</div><div class="t m0 x2c hd y175 ff4 fs3 fc2 sc0 ls3 ws1">urgent: {</div><div class="t m0 x6e hd y176 ff4 fs3 fc2 sc0 ls3 ws1">today: [<span class="fc7 ws4">&quot;Dentist&quot;</span>, <span class="fc7">&quot;Hotel booking&quot;</span>],</div><div class="t m0 x6e hd y177 ff4 fs3 fc2 sc0 ls3 ws1">tomorrow: []</div><div class="t m0 x2c hd yf ff4 fs3 fc2 sc0 ls3">},</div><div class="t m0 x2c hd y178 ff4 fs3 fc2 sc0 ls3 ws1">unimportant: {</div><div class="t m0 x6e hd ya1 ff4 fs3 fc2 sc0 ls3 ws1">today: [<span class="fc7 ws4">&quot;Groceries&quot;</span>],</div><div class="t m0 x6e hd y179 ff4 fs3 fc2 sc0 ls3 ws1">tomorrow: []</div><div class="t m0 x2c hd y17a ff4 fs3 fc2 sc0 ls0">}</div><div class="t m0 x4d hd y17b ff4 fs3 fc2 sc0 ls3">};</div><div class="t m0 x4d hd y17c ff4 fs3 fc2 sc0 ls3 ws4">app.<span class="fc8">get</span>(<span class="fc7">&apos;/todos/:type/:level&apos;</span><span class="ws1">, </span><span class="ff5">function</span><span class="ws1"> (req, res, next) {</span></div><div class="t m0 x2c hd y17d ff5 fs3 fc2 sc0 ls3 ws4">var<span class="ff4 ws1"> todos = todoTypes[req.params.type][req.params.level];</span></div><div class="t m0 x2c hd y17e ff5 fs3 fc2 sc0 ls3 ws4">if<span class="ff4 ws1"> (!todos) {</span>return<span class="ff4 ws1"> <span class="fc8 ws4">next<span class="fc2">();<span class="ls0">}</span></span></span></span></div><div class="t m0 x2c hd y17f ff4 fs3 fc2 sc0 ls3 ws4">res.<span class="fc8">send</span>(todos);</div><div class="t m0 x4d hd y180 ff4 fs3 fc2 sc0 ls3">});</div><div class="c x6f y181 w25 h6c"><div class="t m0 x67 hc y182 ff2 fs3 fc2 sc0 ls0 ws1">No r<span class="_ _0"></span>estrictions on the number of </div><div class="t m0 x67 hc y183 ff2 fs3 fc2 sc0 ls0 ws1">variable input</div></div><div class="t m0 x70 h6d y184 ff2 fse fc9 sc0 ls0 ws16">localhost:3000/todos/impor<span class="_ _9"></span>tant/tomorr<span class="_ _0"></span>ow</div></div></div>
 
 
-    <!-- asq-7 <div id="pf119" class="pf w0 h0 step slide flash" data-page-no="119" data-x="0" data-y="0"><div class="pc pc77 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg77.png"></div></div>-->
+    <div id="asq-7" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="119" data-timer="60">
+    <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.8); width: 1000px; margin-top: 20px;"><code style="background-color: transparent;"><b>
+        app.get('/whaa+[dt]s+upp*', function(req,res){
+          res.send(…)
+        });
+</b></code></pre>
+      </div>
+      <asq-exercise style="margin-top: 40px; height: 300px; padding: 10px 20px; background: rgba(255, 255, 255, 0.8);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">Which route does this handler <u>not</u> match?</h4></asq-stem>
+            <asq-option class="smaller" style="" name="A." correct>/whaadtsuppp</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="B.">/whaaatssupp</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="C.">/Whaaadssup</asq-option>
+     <asq-option class="smaller" style="margin-top: 20px;" name="D.">/whaaaaaaaaaadssup</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@105567585@N06</div>
+    </div>
 
     <div id="pf120" class="pf w0 h0 step slide flash" data-page-no="120" data-x="0" data-y="0"><div class="pc pc77 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg78.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">Organizing r<span class="_ _5"></span>outes</div>
 <div class="t m0 x21 h6e y185 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v4">Keeping r<span class="_ _0"></span>outes in the main application file becomes </span></div>
@@ -683,6 +963,40 @@ to advance a slide -->
 <div class="c x0 y1c9 w0 h8c"><div class="t m0 x80 hd y1ca ff4 fs3 fc5 sc0 ls3 ws1">  1 <span class="ff5 fc2 ws4">var</span><span class="fc2"> ejs = <span class="fc8 ws4">require</span>(<span class="fc7 ws4">&apos;ejs&apos;</span>);</span></div><div class="t m0 x80 hd y1cb ff4 fs3 fc5 sc0 ls3 ws1">  2 </div><div class="t m0 x80 hd y1cc ff4 fs3 fc5 sc0 ls3 ws1">  3 <span class="ff5 fc2 ws4">var</span><span class="fc2"> people = [<span class="fc7 ws4">‘wolverine&apos;</span>, <span class="fc7 ws4">&apos;paul&apos;</span>, <span class="fc7 ws4">&apos;picard&apos;</span>];</span></div><div class="t m0 x80 hd y1cd ff4 fs3 fc5 sc0 ls3 ws1">  4 <span class="ff5 fc2 ws4">var</span><span class="fc2"> transformUpper = <span class="ff5 ws4">function</span> (inputString) { </span></div><div class="t m0 x80 hd y1ce ff4 fs3 fc5 sc0 ls3 ws1">  5 <span class="fc2">                     <span class="ff5 ws4">return</span> inputString.<span class="fc8 ws4">toUpperCase</span>(); </span></div><div class="t m0 x80 hd y1cf ff4 fs3 fc2 sc0 ls1d ws1"> <span class="fc5 ls3"> <span class="fc2">   <span class="ls0"></span></span></span></div><div class="t m0 x80 hd y1d0 ff4 fs3 fc5 sc0 ls3 ws1">   </div><div class="t m0 x80 hd y1d1 ff4 fs3 fc5 sc0 ls3 ws1">  8 <span class="ff5 fc2 ws4">var</span><span class="fc2"> template = <span class="fc7">&apos;&lt;%= helperFunc(input.join(&quot;, &quot;))</span></span></div><div class="t m0 x80 hd y1d2 ff4 fs3 fc5 sc0 ls3 ws1">  9 <span class="fc7">               ; %&gt;&apos;<span class="fc2 ls0">;</span></span></div><div class="t m0 x80 hd y1d3 ff4 fs3 fc5 sc0 ls3 ws1"> 10 <span class="ff5 fc2 ws4">var</span><span class="fc2"> context = {</span></div><div class="t m0 x80 hd y1d4 ff4 fs3 fc5 sc0 ls3 ws1"> 11 <span class="fc2">  input: people,</span></div><div class="t m0 x80 hd y1d5 ff4 fs3 fc5 sc0 ls3 ws1"> 12 <span class="fc2">  helperFunc: transformUpper</span></div><div class="t m0 x80 hd y1d6 ff4 fs3 fc5 sc0 ls3 ws1"> 13 <span class="fc2">};</span></div><div class="t m0 x80 hd y1d7 ff4 fs3 fc5 sc0 ls3 ws1"> 14 </div><div class="t m0 x80 hd y1d8 ff4 fs3 fc5 sc0 ls3 ws1"> 15 <span class="fc2 ws4">console.<span class="fc8">log</span>(ejs.<span class="fc8">render</span><span class="ws1">(template, context));</span></span></div></div>
 <div class="c x2a y1ac w2c h80"><div class="t m0 x1f h11 y1ad ff1 fs3 fc1 sc0 ls0 ws1">npm install ejs</div></div><div class="c x20 y1d9 w34 h8d"><div class="t m0 x67 h11 y1da ff1 fs3 fc2 sc0 ls5 ws1">define <span class="ff2 ls0">your own function</span></div></div><div class="c x81 y1db w35 h8e"><div class="t m0 x67 hc y1dc ff2 fs3 fc2 sc0 ls0">function</div></div><div class="c x82 y1dd w36 h8e"><div class="t m0 x11 hc y1de ff2 fs3 fc2 sc0 ls0">array</div></div><div class="c x83 y1df w37 h8d"><div class="t m0 x67 h11 y1e0 ff1 fs3 fc2 sc0 ls5 ws1">define <span class="ff2 ls0">the context object</span></div></div></div></div>
 
+<div id="asq-8" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="147a" data-timer="60">
+    <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.9); width: 1000px;"><code style="background-color: transparent;"><b>
+1 var ejs = require('ejs');
+2
+3 var people = ['Wolverine', 'paul', 'picard'];
+4 var X = function (input) { if(input){
+5                                 return input[0];
+6                            }
+7                            return "";
+8 }
+9
+10 var template = '<%= helperFunc(input); %>';
+11 var context = {
+12   input: people,
+13   helperFunc: X
+14 };
+15
+16 console.log(ejs.render(template, context));
+</b></code></pre>
+      </div>
+      <asq-exercise style="margin-top: 10px; height: 300px; padding: 10px 20px; background: rgba(255, 255, 255, 0.9);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">What is shown in the console?</h4></asq-stem>
+            <asq-option class="smaller" style="" name="A.">The first letter of each array element</asq-option>
+     <asq-option class="smaller" style="margin-top: 10px;" name="B." correct>The first array element</asq-option>
+     <asq-option class="smaller" style="margin-top: 10px;" name="C.">An empty string if the input is not null</asq-option>
+     <asq-option class="smaller" style="margin-top: 10px;" name="D.">Nothing, line 13 produces an error</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@fknet</div>
+    </div>
 
     <div id="pf148" class="pf w0 h0 step slide flash" data-page-no="148" data-x="0" data-y="0"><div class="pc pc94 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg94.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">ejs &amp; user<span class="_ _15"></span>-defined functions</div><div class="t m0 x21 h8b y1c8 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Often you want to make slight changes: <span class="ff1 fc9 ws0">transform</span> or <span class="ff1 fc9 ws0">filter</span></span></div><div class="t m0 x26 ha yd ff2 fs4 fc2 sc0 ls0">58</div><div class="c x0 y1e1 w0 h8f"><div class="t m0 x80 hd y1e2 ff4 fs3 fc5 sc0 ls3 ws1">  1 <span class="ff5 fc2 ws4">var</span><span class="fc2"> ejs = <span class="fc8 ws4">require</span>(<span class="fc7 ws4">&apos;ejs&apos;</span>);</span></div><div class="t m0 x80 hd y1e3 ff4 fs3 fc5 sc0 ls3 ws1">  2 </div><div class="t m0 x80 hd y1e4 ff4 fs3 fc5 sc0 ls3 ws1">  3 <span class="ff5 fc2 ws4">var</span><span class="fc2"> people = [<span class="fc7 ws4">&apos;Wolverine&apos;</span>, <span class="fc7 ws4">&apos;paul&apos;</span>, <span class="fc7 ws4">&apos;picard&apos;</span>];</span></div><div class="t m0 x80 hd y1e5 ff4 fs3 fc5 sc0 ls3 ws1">  4 <span class="ff5 fc2 ws4">var</span><span class="fc2"> first = <span class="ff5 ws4">function</span> (input) { <span class="ff5 ws4">if</span>(input){</span></div><div class="t m0 x80 hd y1e6 ff4 fs3 fc5 sc0 ls3 ws1">  5 <span class="fc2">                                <span class="ff5 ws4">return</span> input<span class="ff5 ws4">[0]</span><span class="ls0">;</span></span></div><div class="t m0 x80 hd y1e7 ff4 fs3 fc5 sc0 ls3 ws1">  6 <span class="fc2">                              }</span></div><div class="t m0 x80 hd y1e8 ff4 fs3 fc5 sc0 ls3 ws1">  7 <span class="fc2">                              <span class="ff5 ws4">return</span><span class="ls4"> </span><span class="fc7 ws4">&quot;&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x80 hd y1e9 ff4 fs3 fc5 sc0 ls3 ws1">  8 <span class="fc2 ls0">}</span></div><div class="t m0 x80 hd y1ea ff4 fs3 fc5 sc0 ls3 ws1">  9 </div><div class="t m0 x80 hd y1eb ff4 fs3 fc5 sc0 ls3 ws1"> 10 <span class="ff5 fc2 ws4">var</span><span class="fc2"> template = <span class="fc7">&apos;&lt;%= helperFunc(input); %&gt;&apos;</span><span class="ls0">;</span></span></div><div class="t m0 x80 hd y1ec ff4 fs3 fc5 sc0 ls3 ws1"> 11 <span class="ff5 fc2 ws4">var</span><span class="fc2"> context = {</span></div><div class="t m0 x80 hd y1ed ff4 fs3 fc5 sc0 ls3 ws1"> 12 <span class="fc2">  input: people,</span></div><div class="t m0 x80 hd y1ee ff4 fs3 fc5 sc0 ls3 ws1"> 13 <span class="fc2">  helperFunc: first</span></div><div class="t m0 x80 hd y1ef ff4 fs3 fc5 sc0 ls3 ws1"> 14 <span class="fc2">};</span></div><div class="t m0 x80 hd y1f0 ff4 fs3 fc5 sc0 ls3 ws1"> 15 </div><div class="t m0 x80 hd y1f1 ff4 fs3 fc5 sc0 ls3 ws1"> 16 <span class="fc2 ws4">console.<span class="fc8">log</span>(ejs.<span class="fc8">render</span><span class="ws1">(template, context));</span></span></div></div><div class="c x2a y1ac w2c h80"><div class="t m0 x1f h11 y1ad ff1 fs3 fc1 sc0 ls0 ws1">npm install ejs</div></div></div></div>
 
@@ -701,7 +1015,36 @@ to advance a slide -->
     <div id="pf154" class="pf w0 h0 step slide flash" data-page-no="154" data-x="0" data-y="0"><div class="pc pc96 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg9a.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">ejs and Ja<span class="_ _a"></span>vaScript</div><div class="t m0 x26 ha yd ff2 fs4 fc2 sc0 ls0">59</div><div class="c x2a y1ac w2c h80"><div class="t m0 x1f h11 y1ad ff1 fs3 fc1 sc0 ls0 ws1">npm install ejs</div></div><div class="t m0 x31 h66 y1f4 ff2 fs18 fc2 sc0 ls0 ws1">* The <span class="ff4 ls21 ws19">forEach()</span> method executes a pr<span class="_ _0"></span>ovided function once per array element.</div><div class="t m0 x85 hd y1f5 ff4 fs3 fc5 sc0 ls3 ws1">  1 <span class="fc2">var ejs = <span class="fc8 ws4">require</span>(<span class="fc7 ws4">&apos;ejs&apos;</span>);</span></div><div class="t m0 x85 hd y1f6 ff4 fs3 fc5 sc0 ls3 ws1">  2 <span class="fc2">var template = <span class="fc7 ws4">&apos;&lt;%<span class="ls0 ws1"> </span></span></span></div><div class="t m0 x85 hd y11c ff4 fs3 fc7 sc0 ls3 ws1">                    movies.forEach(function(movie){</div><div class="t m0 x86 hd y1f7 ff4 fs3 fc7 sc0 ls3 ws1">             console.log(movie.title+&quot;/&quot;+movie.release);</div><div class="t m0 x86 hd y1f8 ff4 fs3 fc7 sc0 ls3 ws1">          })</div><div class="t m0 x86 hd y94 ff4 fs3 fc7 sc0 ls3 ws1">          %&gt;&apos;<span class="fc2 ls0">;</span></div><div class="t m0 x85 hd y1f9 ff4 fs3 fc5 sc0 ls3 ws1">  3 <span class="fc2">var context = {<span class="fc7 ws4">&apos;movies&apos;</span>: [</span></div><div class="t m0 x85 hd y1fa ff4 fs3 fc5 sc0 ls3 ws1">  4 <span class="fc2">        {title:<span class="fc7">&apos;The Hobbit&apos;, </span><span class="ws4">release:<span class="fcc">2014</span><span class="ls0 ws1a">},</span></span></span></div><div class="t m0 x85 hd y1fb ff4 fs3 fc5 sc0 ls3 ws1">  5 <span class="fc2">        {title:<span class="fcd">&apos;<span class="fc7 ws4">X-Men&apos;</span></span>, release:<span class="fcd ws4">&apos;2016&apos;</span>},</span></div><div class="t m0 x85 hd y1fc ff4 fs3 fc5 sc0 ls3 ws1">  6 <span class="fc2">        {title:<span class="fcd">&apos;<span class="fc7">Superman V&apos;, </span></span><span class="ws4">release:<span class="fcc">2014</span><span class="ls0">}</span></span></span></div><div class="t m0 x85 hd y1fd ff4 fs3 fc5 sc0 ls3 ws1">  7 <span class="fc2">]};</span></div><div class="t m0 x85 hd y1fe ff4 fs3 fc5 sc0 ls3 ws1">  8 <span class="fc2 ws4">ejs.<span class="fc8">render</span><span class="ws1">(template, context);</span></span></div><div class="c x87 y1ff w38 h85"><div class="t m0 x18 hc y200 ffa fs3 fc2 sc0 ls0 ws14">use<span class="ff2 ws1">  <span class="ff4 ls3">&lt;% </span><span class="ffa">for control-flow </span></span></div><div class="t m0 x18 h86 y201 ffa fs3 fc2 sc0 ls6 ws1">purposes; no output </div></div><div class="c x88 y202 w39 h90"><div class="t m0 x18 hd y203 ff4 fs3 fc1 sc0 ls3 ws4">Array.prototype.forEach()<span class="ls0">*</span></div></div><div class="c x89 y204 w3a h91"><div class="t m0 x18 h86 y205 ffa fs3 fc2 sc0 ls6 ws1">applied to each element</div></div></div></div>
 
 
-    <!-- asq-9 <div id="pf155" class="pf w0 h0 step slide flash" data-page-no="9b" data-x="0" data-y="0"><div class="pc pc9b w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg9b.png"></div></div>-->
+    <div id="asq-9" class="step flash flex-cc" data-x="0" data-y="0" data-page-no="155" data-timer="60">
+    <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.9); width: 1000px;"><code style="background-color: transparent;"><b>
+var ejs = require('ejs');
+var template =
+      '<% if(user) {
+        console.log("Hi "+user);
+        if(user.age>=18){
+          console.log("(adult)");
+        }
+        else {console.log("(minor)");}
+      } %>';
+var context = {user: 'Tom', age:26,
+               address:'Mekelweg 4'};
+ejs.render(template, context);
+</b></code></pre>
+      </div>
+      <asq-exercise style="margin-top: 10px; height: 300px; padding: 10px 20px; background: rgba(255, 255, 255, 0.9);">
+          <asq-stem></asq-stem>
+          <asq-multi-choice-q>
+            <asq-stem><h4 class="small" style="line-height: 1.2;">What is shown in the console?</h4></asq-stem>
+            <asq-option class="smaller" style="" name="A.">Hi Tom (adult)</asq-option>
+     <asq-option class="smaller" style="margin-top: 10px;" name="B." correct>Hi Tom (minor)</asq-option>
+     <asq-option class="smaller" style="margin-top: 10px;" name="C.">Hi Tom</asq-option>
+     <asq-option class="smaller" style="margin-top: 10px;" name="D.">Nothing is shown</asq-option>
+          </asq-multi-choice-q>
+      </asq-exercise>
+      
+      <div class="flickr-credit">flickr@stratman2</div>
+    </div>
 
     <div id="pf156" class="pf w0 h0 step slide flash" data-page-no="156" data-x="0" data-y="0"><div class="pc pc9b w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg9c.png"><div class="t m0 x6 h4 y10 ff3 fs2 fc2 sc0 ls0 ws1">Configuring vie<span class="_ _c"></span>ws with expr<span class="_ _2"></span>ess</div>
 <div class="t m0 x21 h5 yf1 ff2 fs3 fc2 sc0 ls1">•<span class="ff1 fs0 fc9 ls0 ws0 v1">Setting</span><span class="fs0 ls0 ws1 v1"> the <span class="ff1 fc9 ls8 ws9">views</span> dir<span class="_ _0"></span>ector<span class="_ _14"></span>y (the dir<span class="_ _0"></span>ector<span class="_ _9"></span>y containing <span class="ff8">!</span></span></div>
