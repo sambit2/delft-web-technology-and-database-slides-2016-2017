@@ -733,8 +733,8 @@ app.get("/countMe", function (req, res) {
           <asq-multi-choice-q>
             <asq-stem><h4 class="small" style="line-height: 1.2;">How many middleware components have we set up?</h4></asq-stem>
             <asq-option style="" class="smaller" name="A.">1</asq-option>
-     <asq-option style="margin-top: 10px;" class="smaller" name="B." correct>2</asq-option>
-     <asq-option style="margin-top: 10px;" class="smaller" name="C.">3</asq-option>
+     <asq-option style="margin-top: 10px;" class="smaller" name="B.">2</asq-option>
+     <asq-option style="margin-top: 10px;" class="smaller" name="C." correct>3</asq-option>
      <asq-option style="margin-top: 10px;" class="smaller" name="D.">What are middleware components??</asq-option>
           </asq-multi-choice-q>
       </asq-exercise>
@@ -912,8 +912,6 @@ app.get("/countMe", function (req, res) {
 <script src="frameworkData/main.js"></script>
 <script src="js/highlight.min.js"></script>
 <script src="bower_components/impress-step-timer/impress-step-timer.js"></script>
-<!--JavaScript code used throughout this lecture
-<script src="js/examples.js"></script>-->
 <script type="text/javascript">
 
 // syntax highlighting
@@ -948,11 +946,7 @@ document.addEventListener("impress:substepenter", function (event){
 
       // by default, clicking enter on an input form or clicking an input[type=submit]
       // will submit the form.
-      // this will end up in the browser issuing a new request to the 
-      // action attribute of the form (the default is the current url)
-      // In our case, this will remove ?role=presenter from the url 
-      // so the role will change to viewer.
-      // we have to prevent this
+      
       var cookieForms = document.querySelectorAll('.cookie-form');
       [].forEach.call(cookieForms, function(input){
         input.addEventListener('submit', function(e){
