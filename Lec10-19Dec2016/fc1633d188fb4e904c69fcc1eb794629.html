@@ -578,24 +578,14 @@ document.cookie = "expires=60";
 document.cookie = "name=value; expires=Thu, 01-Jan-1970 00:45:00 GMT";
 </pre></code></div>
 
-      <form class="pure-form x-small" style="padding: 20px; background-color: #333; color: #eee;">
+      <form class="pure-form x-small cookie-form" style="padding: 20px; background-color: #333; color: #eee;">
       Add a cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
         <input placeholder="name=value" id="addCookie" type="text"><br>&nbsp;<br>
       Delete a cookie: 
         <input placeholder="name=value" id="deleteCookie" type="text"><br>&nbsp;<br>
   
-        <input onclick="
-          var toadd = document.getElementById('addCookie').value;
-          if(toadd.length > 0) {
-             document.cookie = toadd;
-          }
-
-          var todel = document.getElementById('deleteCookie').value;
-          if(todel.length > 0) {
-             document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
-          }
-        " class="pure-button pure-button-primary" value="Modify cookies" type="submit"><br>&nbsp;<br>
-        <input onclick="alert(document.cookie)" class="pure-button pure-button-warning" value="Show cookies" type="submit">
+        <input class="pure-button pure-button-primary modify-cookies-input" value="Modify cookies" type="submit"><br>&nbsp;<br>
+        <input class="pure-button pure-button-warning show-cookie-input" value="Show cookies" type="submit">
       </form>
       <div class="flickr-credit">flickr@manavg</div>
     </section>
@@ -619,24 +609,14 @@ var toadd = document.getElementById('addCookie').value;
  }
 </pre></code></div>
 
-      <form class="pure-form x-small" style="padding: 20px; background-color: #333; color: #eee;">
+      <form class="pure-form x-small cookie-form" style="padding: 20px; background-color: #333; color: #eee;">
       Add a cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
         <input placeholder="name=value" id="addCookie" type="text"><br>&nbsp;<br>
       Delete a cookie: 
         <input placeholder="name=value" id="deleteCookie" type="text"><br>&nbsp;<br>
   
-        <input onclick="
-          var toadd = document.getElementById('addCookie').value;
-          if(toadd.length > 0) {
-             document.cookie = toadd;
-          }
-
-          var todel = document.getElementById('deleteCookie').value;
-          if(todel.length > 0) {
-             document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
-          }
-        " class="pure-button pure-button-primary" value="Modify cookies" type="submit"><br>&nbsp;<br>
-        <input onclick="alert(document.cookie)" class="pure-button pure-button-warning" value="Show cookies" type="submit">
+        <input class="pure-button pure-button-primary modify-cookies-input" value="Modify cookies" type="submit"><br>&nbsp;<br>
+        <input class="pure-button pure-button-warning show-cookie-input" value="Show cookies" type="submit">
       </form>
       <div class="flickr-credit">flickr@manavg</div>
     </section>
@@ -972,5 +952,48 @@ document.addEventListener("impress:substepenter", function (event){
             event.target.parentElement.querySelector(".pc img").src=event.target.getAttribute('data-bg-src');
         });
 
+    </script>
+    <script>
+      //demos
+
+      // by default, clicking enter on an input form or clicking an input[type=submit]
+      // will submit the form.
+      // this will end up in the browser issuing a new request to the 
+      // action attribute of the form (the default is the current url)
+      // In our case, this will remove ?role=presenter from the url 
+      // so the role will change to viewer.
+      // we have to prevent this
+      var cookieForms = document.querySelectorAll('.cookie-form');
+      [].forEach.call(cookieForms, function(input){
+        input.addEventListener('submit', function(e){
+          e.preventDefault();
+        })
+      });
+      var modifyCookieInputs = document.querySelectorAll('.modify-cookies-input');
+      [].forEach.call(modifyCookieInputs, function(input){
+        input.addEventListener('click', function(e){
+          // by default, input[type=submit] elements will submit the form
+          // we have to prevent this
+          e.preventDefault();
+          var toadd = document.getElementById('addCookie').value;
+          if(toadd.length > 0) {
+             document.cookie = toadd;
+          }
+
+          var todel = document.getElementById('deleteCookie').value;
+          if(todel.length > 0) {
+             document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+          }
+        });
+      });
+      var showCookieSubmitInputs = document.querySelectorAll('.show-cookie-input');
+      [].forEach.call(showCookieSubmitInputs, function(input){
+        input.addEventListener('click', function(e){
+          // by default, input[type=submit] elements will submit the form
+          // we have to prevent this
+          e.preventDefault();
+          alert(document.cookie);
+        })
+      })
     </script>
 </body></html>
