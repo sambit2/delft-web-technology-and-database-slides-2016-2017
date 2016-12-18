@@ -576,11 +576,11 @@ document.cookie = "name=value; expires=Thu, 01-Jan-1970 00:45:00 GMT";
 
       <form class="pure-form x-small cookie-form" style="padding: 20px; background-color: #333; color: #eee;">
       Add a cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
-        <input placeholder="name=value" id="addCookie" type="text"><br>&nbsp;<br>
+        <input placeholder="name=value" id="addCookie1" type="text"><br>&nbsp;<br>
       Delete a cookie: 
-        <input placeholder="name=value" id="deleteCookie" type="text"><br>&nbsp;<br>
+        <input placeholder="name=value" id="deleteCookie1" type="text"><br>&nbsp;<br>
   
-        <input class="pure-button pure-button-primary modify-cookies-input" value="Modify cookies" type="submit"><br>&nbsp;<br>
+        <input data-num="1" class="pure-button pure-button-primary modify-cookies-input" value="Modify cookies" type="submit"><br>&nbsp;<br>
         <input class="pure-button pure-button-warning show-cookie-input" value="Show cookies" type="submit">
       </form>
     </section>
@@ -602,11 +602,11 @@ var toadd = document.getElementById('addCookie').value;
 
       <form class="pure-form x-small cookie-form" style="padding: 20px; background-color: #333; color: #eee;">
       Add a cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
-        <input placeholder="name=value" id="addCookie" type="text"><br>&nbsp;<br>
+        <input placeholder="name=value" id="addCookie2" type="text"><br>&nbsp;<br>
       Delete a cookie: 
-        <input placeholder="name=value" id="deleteCookie" type="text"><br>&nbsp;<br>
+        <input placeholder="name=value" id="deleteCookie2" type="text"><br>&nbsp;<br>
   
-        <input class="pure-button pure-button-primary modify-cookies-input" value="Modify cookies" type="submit"><br>&nbsp;<br>
+        <input data-num="2" class="pure-button pure-button-primary modify-cookies-input" value="Modify cookies" type="submit"><br>&nbsp;<br>
         <input class="pure-button pure-button-warning show-cookie-input" value="Show cookies" type="submit">
       </form>
     </section>
@@ -959,12 +959,13 @@ document.addEventListener("impress:substepenter", function (event){
           // by default, input[type=submit] elements will submit the form
           // we have to prevent this
           e.preventDefault();
-          var toadd = document.getElementById('addCookie').value;
+          var formNum = e.target.dataset.num;
+          var toadd = document.getElementById('addCookie' + formNum).value;
           if(toadd.length > 0) {
              document.cookie = toadd;
           }
 
-          var todel = document.getElementById('deleteCookie').value;
+          var todel = document.getElementById('deleteCookie' + formNum).value;
           if(todel.length > 0) {
              document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
           }
