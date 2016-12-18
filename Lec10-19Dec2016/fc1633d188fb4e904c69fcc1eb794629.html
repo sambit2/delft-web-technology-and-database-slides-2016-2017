@@ -557,8 +557,93 @@ Set-Cookie: ID3=ssd33dd; Path=/; Expires=Fri, 30 Jan 2018
     <div id="pf80" class="pf w0 h0 step slide flash" data-page-no="80" data-x="0" data-y="0"><div class="pc pc4f w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg50.png"><div class="t m0 x6 h4 y6 ff3 fs2 fc2 sc0 ls0 ws1">Cookies in Ja<span class="_ _8"></span>vaScript</div><div class="t m0 x7 h83 y12f ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Not always necessar<span class="_ _4"></span>y to r<span class="_ _b"></span>eceive cookies fr<span class="_ _0"></span>om a server </span></div><div class="t m0 x7 h5 y130 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Cookies can be <span class="ff1 fc3">set in the browser</span></span></div><div class="t m0 x7 h21 y131 ff2 fs3 fc2 sc0 ls1">•<span class="fs0 ls0 ws1 v1">Standar<span class="_ _0"></span>d use case: r<span class="_ _0"></span>emember for<span class="_ _4"></span>m input</span></div><div class="t m0 x14 h9 yc ff2 fs4 fc2 sc0 ls0">35</div><div class="c x2d y132 w1e h84"><div class="t m0 x33 h2a y133 ff6 fs3 fc9 sc0 ls11 ws1">  1 <span class="ffd fc11">//set a cookie</span></div><div class="t m0 x33 h2a y134 ff6 fs3 fc9 sc0 ls11 ws1">  2 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;name=value&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y135 ff6 fs3 fc9 sc0 ls11 ws1">  3 <span class="fc2">document.cookie = <span class="fcb">&quot;name=value; expires=Fri, </span></span></div><div class="t m0 x54 h2a y136 ff7 fs3 fcb sc0 ls11 ws1e">24-Jan-2017<span class="ff6 ws1"> 12:45:00 GMT&quot;<span class="fc2 ls0">;</span></span></div><div class="t m0 x33 h2a y137 ff6 fs3 fc9 sc0 ls11 ws1">  4 </div><div class="t m0 x33 h2a y138 ff6 fs3 fc9 sc0 ls11 ws1">  5 <span class="ffd fc11">//delete a cookie</span></div><div class="t m0 x33 h2a y139 ff6 fs3 fc9 sc0 ls11 ws1">  6 <span class="fc2">document.cookie = <span class="fcb">&quot;name=value; expires=Fri, </span></span></div><div class="t m0 x54 h2a y13a ff7 fs3 fcb sc0 ls11 ws1e">24-Jan-1970<span class="ff6 ws1"> 12:45:00 GMT&quot;<span class="fc2 ls0">;</span></span></div></div></div></div>
 
 
+    
+    <!-- slide: Live Cookie addition and deletion -->
 
-    <!-- live JS <div id="pf81" class="pf w0 h0 step slide flash" data-page-no="81" data-x="0" data-y="0"><div class="pc pc51 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg51.png"><div class="t m0 x6 h4 y13b ff6 fs2 fc2 sc0 ls2d ws23">document.cookie<span class="ff3 ls0 ws1"> is unlik<span class="_ _5"></span>e </span></div><div class="t m0 x6 h4 y13c ff3 fs2 fc2 sc0 ls0 ws1">an<span class="_ _2"></span>y other</div><div class="t m0 x14 h9 yc ff2 fs4 fc2 sc0 ls0">36</div><div class="c x1c y13d w1f h84"><div class="t m0 x33 h2a y13e ff6 fs3 fc9 sc0 ls11 ws1">  1 <span class="ffd fc11">//adding three cookies</span></div><div class="t m0 x33 h2a y13f ff6 fs3 fc9 sc0 ls11 ws1">  2 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;couponnum=123&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y140 ff6 fs3 fc9 sc0 ls11 ws1">  3 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;couponval=20%&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y141 ff6 fs3 fc9 sc0 ls11 ws1">  4 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;expires=60&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y142 ff6 fs3 fc9 sc0 ls11 ws1">  5 </div><div class="t m0 x33 h2a y143 ff6 fs3 fc9 sc0 ls11 ws1">  6 <span class="ffd fc11">//delete a cookie</span></div><div class="t m0 x33 h2a y144 ff6 fs3 fc9 sc0 ls11 ws1">  7 <span class="ffd fc11">//document.cookie=null or document.cookie=&quot;&quot; has no effect</span></div><div class="t m0 x33 h2a y145 ff6 fs3 fc9 sc0 ls11 ws1">  8 <span class="fc2">document.cookie = <span class="fcb">&quot;name=value; expires=Thu, </span></span></div><div class="t m0 x55 h2a y146 ff7 fs3 fcb sc0 ls11 ws1e">01-Jan-1970<span class="ff6 ws1"> 00:45:00 GMT&quot;<span class="fc2 ls0">;</span></span></div></div><div class="c x56 y147 w20 h85"><div class="t m3 x57 h86 y148 ff1 fs20 fc1 sc0 ls0 ws1">Example 12</div></div></div></div>
+    <section id="pf81" class="step flash from-reveal">
+        <div style="display: flex;">
+     <pre class="small" style="background-color: rgba(255, 255, 255, 0.7); width: 1000px; height: 100px; padding: 10px;">
+     <h2>document.cookie is unlike any other</h2>
+     </pre>
+      </div>
+        <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.7); width: 1000px; margin-top: 10px;"><code style="background-color: transparent;"><b>
+//adding three cookies
+document.cookie = "couponnum=123";
+document.cookie = "couponval=20%";
+document.cookie = "expires=60";
+
+//delete a cookie
+//document.cookie=null or document.cookie="" has no effect
+document.cookie = "name=value; expires=Thu, 01-Jan-1970 00:45:00 GMT";
+</pre></code></div>
+
+      <form class="pure-form x-small" style="padding: 20px; background-color: #333; color: #eee;">
+      Add a cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+        <input placeholder="name=value" id="addCookie" type="text"><br>&nbsp;<br>
+      Delete a cookie: 
+        <input placeholder="name=value" id="deleteCookie" type="text"><br>&nbsp;<br>
+  
+        <input onclick="
+          var toadd = document.getElementById('addCookie').value;
+          if(toadd.length > 0) {
+             document.cookie = toadd;
+          }
+
+          var todel = document.getElementById('deleteCookie').value;
+          if(todel.length > 0) {
+             document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+          }
+        " class="pure-button pure-button-primary" value="Modify cookies" type="submit"><br>&nbsp;<br>
+        <input onclick="alert(document.cookie)" class="pure-button pure-button-warning" value="Show cookies" type="submit">
+      </form>
+      <div class="flickr-credit">flickr@manavg</div>
+    </section>
+
+
+    <section id="pf82" class="step flash from-reveal">
+        <div style="display: flex;">
+     <pre class="small" style="background-color: rgba(255, 255, 255, 0.7); width: 1000px; height: 100px; padding: 10px;">
+     <h2>document.cookie is unlike any other</h2>
+     </pre>
+      </div>
+        <div style="display: flex;">
+     <pre class="x-small trans" style="background-color: rgba(255, 255, 255, 0.7); width: 1000px; margin-top: 10px;"><code style="background-color: transparent;"><b>
+var toadd = document.getElementById('addCookie').value;
+ if( toadd.length > 0) {
+     document.cookie = toadd;
+ }
+ var todel = document.getElementById('deleteCookie').value;
+ if( todel.length > 0) {
+     document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+ }
+</pre></code></div>
+
+      <form class="pure-form x-small" style="padding: 20px; background-color: #333; color: #eee;">
+      Add a cookie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+        <input placeholder="name=value" id="addCookie" type="text"><br>&nbsp;<br>
+      Delete a cookie: 
+        <input placeholder="name=value" id="deleteCookie" type="text"><br>&nbsp;<br>
+  
+        <input onclick="
+          var toadd = document.getElementById('addCookie').value;
+          if(toadd.length > 0) {
+             document.cookie = toadd;
+          }
+
+          var todel = document.getElementById('deleteCookie').value;
+          if(todel.length > 0) {
+             document.cookie = todel+'; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+          }
+        " class="pure-button pure-button-primary" value="Modify cookies" type="submit"><br>&nbsp;<br>
+        <input onclick="alert(document.cookie)" class="pure-button pure-button-warning" value="Show cookies" type="submit">
+      </form>
+      <div class="flickr-credit">flickr@manavg</div>
+    </section>
+
+
+
+    <!-- <div id="pf81" class="pf w0 h0 step slide flash" data-page-no="81" data-x="0" data-y="0"><div class="pc pc51 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg51.png"><div class="t m0 x6 h4 y13b ff6 fs2 fc2 sc0 ls2d ws23">document.cookie<span class="ff3 ls0 ws1"> is unlik<span class="_ _5"></span>e </span></div><div class="t m0 x6 h4 y13c ff3 fs2 fc2 sc0 ls0 ws1">an<span class="_ _2"></span>y other</div><div class="t m0 x14 h9 yc ff2 fs4 fc2 sc0 ls0">36</div><div class="c x1c y13d w1f h84"><div class="t m0 x33 h2a y13e ff6 fs3 fc9 sc0 ls11 ws1">  1 <span class="ffd fc11">//adding three cookies</span></div><div class="t m0 x33 h2a y13f ff6 fs3 fc9 sc0 ls11 ws1">  2 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;couponnum=123&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y140 ff6 fs3 fc9 sc0 ls11 ws1">  3 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;couponval=20%&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y141 ff6 fs3 fc9 sc0 ls11 ws1">  4 <span class="fc2">document.cookie = <span class="fcb ws1e">&quot;expires=60&quot;</span><span class="ls0">;</span></span></div><div class="t m0 x33 h2a y142 ff6 fs3 fc9 sc0 ls11 ws1">  5 </div><div class="t m0 x33 h2a y143 ff6 fs3 fc9 sc0 ls11 ws1">  6 <span class="ffd fc11">//delete a cookie</span></div><div class="t m0 x33 h2a y144 ff6 fs3 fc9 sc0 ls11 ws1">  7 <span class="ffd fc11">//document.cookie=null or document.cookie=&quot;&quot; has no effect</span></div><div class="t m0 x33 h2a y145 ff6 fs3 fc9 sc0 ls11 ws1">  8 <span class="fc2">document.cookie = <span class="fcb">&quot;name=value; expires=Thu, </span></span></div><div class="t m0 x55 h2a y146 ff7 fs3 fcb sc0 ls11 ws1e">01-Jan-1970<span class="ff6 ws1"> 00:45:00 GMT&quot;<span class="fc2 ls0">;</span></span></div></div><div class="c x56 y147 w20 h85"><div class="t m3 x57 h86 y148 ff1 fs20 fc1 sc0 ls0 ws1">Example 12</div></div></div></div>
 
 
 
@@ -857,6 +942,8 @@ app.get("/countMe", function (req, res) {
 <script src="frameworkData/main.js"></script>
 <script src="js/highlight.min.js"></script>
 <script src="bower_components/impress-step-timer/impress-step-timer.js"></script>
+<!--JavaScript code used throughout this lecture
+<script src="js/examples.js"></script>-->
 <script type="text/javascript">
 
 // syntax highlighting
