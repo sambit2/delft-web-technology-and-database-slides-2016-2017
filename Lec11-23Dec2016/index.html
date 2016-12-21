@@ -43,12 +43,12 @@
     </p>
   </div>
 
-  <asq-settings max-num-submissions="1" slideflow="ctrl"></asq-settings>
+  <!--<asq-settings max-num-submissions="1" slideflow="ctrl"></asq-settings>-->
 
 <div id="impress">
 
 <div id="pf1" class="step pf w0 h0" data-x="0" data-y="0" data-scale="0.4" data-page-no="1">
-<div style="position: absolute; z-index: 2 ;">
+<div style="position: absolute; z-index: 2;">
             <div class="small">slack-channel: <a style="color: rgb(232,164,51); background: none;" href="ti1506-students.slack.nl">ti1506-students.slack.nl</a> </div>
         </div>
         <div class="small" style="position: absolute;
@@ -357,14 +357,11 @@ WHERE artist.artistId = album.artistId
 </code></pre>
       </asq-stem>
 
-    <asq-option name="a">Retrieve the id and name of artists that published at
+    <asq-option class="smaller" style="display: block;" name="a">Retrieve the id and name of artists that published at
 least one album</asq-option>
-    <asq-option name="b">Retrieve the id and name of artists that published
-more than one albums</asq-option>
-    <asq-option name="c" correct>Retrieve the id and name of artists that published no
-album</asq-option>
-    <asq-option name="d">Retrieve the id and name of artists that published
-with other artists</asq-option>
+    <asq-option class="smaller" style="display: block; margin-top: 20px;" name="b">Retrieve the id and name of artists that published more than one albums</asq-option>
+    <asq-option class="smaller" style="display: block; margin-top: 20px;" name="c" correct>Retrieve the id and name of artists that published no album</asq-option>
+    <asq-option class="smaller" style="display: block; margin-top: 20px;" name="d">Retrieve the id and name of artists that published with other artists</asq-option>
     </asq-multi-choice-q>
   </asq-exercise>
 </div>

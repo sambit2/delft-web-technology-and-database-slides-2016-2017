@@ -1,42 +1,16 @@
 {
-  "name": "Advanced SQL",
+  "name": "asq-presentation",
   "private": "true",
-  "version": "0.0.1",
   "authors": [
-    "Alessandro Bozzon",
-    "Vasileios Triglianos"
+    "ASQ"
   ],
-  "description": "slides for Advanced SQL for the course of Web- and Database Technology at the Delft University of Technology",
-  "main": "index.html",
+  "description": "Presentation generated from ASQ",
   "keywords": [
-    "TU Delft",
-    "Web and Database Technology",
-    "ASQ",
-    "Web Components",
-    "SQL"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "components",
-    "test",
-    "tests"
+    "ASQ"
   ],
   "dependencies": {
-    "asq-canvas": "asq-usi-elements/asq-canvas#master",
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
-    "asq-impress-js": "ASQ-USI/impress.js#master",
-    "jquery": "~2.1.4",
-    "paper-icon-button": "polymerelements/paper-icon-button#~1.0.3",
-    "polymer": "~1.2.3",
-    "usi-web-atelier-slides-common": "ASQ-USI-Elements/usi-web-atelier-slides-common#master",
-    "impress-step-timer": "triglian/impress-step-timer#master",
-    "webcomponentsjs": "*"
-  },
-  "resolutions": {
-    "polymer": "~1.1.4",
-    "iron-list": "~1.1.2"
+    "webcomponentsjs": "*",
+    "impress-step-timer": "triglian/impress-step-timer"
   }
 }
