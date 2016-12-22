@@ -62,6 +62,10 @@ asq-canvas{
   background-image: url('../img/bg/asq-new2.jpg');
   background-size: cover;
 }
+#announcements{
+  background-image: url('../img/bg/announcement.jpg');
+  background-size: cover;
+}
 
 .flickr-credit{
   font-weight: normal;
