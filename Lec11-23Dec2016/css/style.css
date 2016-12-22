@@ -50,6 +50,26 @@ asq-canvas{
   display:none;
 }
 
+#asq-new{
+  background-image: url('../img/bg/asq-new.jpg');
+  background-size: cover;
+}
+#asq-new1{
+  background-image: url('../img/bg/asq-new1.jpg');
+  background-size: cover;
+}
+#asq-new2{
+  background-image: url('../img/bg/asq-new2.jpg');
+  background-size: cover;
+}
+
+.flickr-credit{
+  font-weight: normal;
+  font-size: 0.3em;
+  color: #fafafa;
+  text-shadow: 0 0 0 rgba(0,0,0, 0.3);
+}
+
 asq-sqlite-q{min-height: 650px; } 
 
 
