@@ -10,6 +10,7 @@
   ],
   "dependencies": {
     "asq-elements": "ASQ-USI-Elements/asq-elements#master",
+    "usi-web-atelier-slides-common": "ASQ-USI-Elements/usi-web-atelier-slides-common#master",
     "webcomponentsjs": "*",
     "impress-step-timer": "triglian/impress-step-timer"
   }
