@@ -59,8 +59,18 @@ to advance a slide -->
   height: 80px;
   background: rgba(0,0,0, 0.7);">
             <asq-welcome class="small"></asq-welcome>
-            <div class="ff2 fc1" style="margin-top: 30px;"><b><center>EER Model & </center></b></div>
+            <!--<div class="ff2 fc1" style="margin-top: 50px"><b><center>EER Model & </center></b></div>-->
           </div>
+          <div class="small" style="position: absolute;
+  z-index: 2;
+  top: 200px;
+  left: 87px;
+  width: 850px;
+  height: 40px;
+  background: rgba(0,0,0, 0.0);">
+            <div class="ff2 fc1"><b><center>EER Model & </center></b></div>
+          </div>
+          
     <div class="pc pc1 w0 h0"><img class="bi x0 y0 w0 h0" alt="" src="img/bg1.png"><div class="t m0 x1 h1 y1 ff1 fs0 fc0 sc0 ls0 ws1">Alessandro Bozzon</div><div class="t m0 x2 h2 y2 ff2 fs0 fc0 sc0 ls0 ws1">TI1506: W<span class="_ _0"></span>eb and Database T<span class="_ _1"></span>echnology </div><div class="t m0 x3 h1 y3 ff1 fs0 fc0 sc0 ls0 ws0">ti1506-ewi@tudelft.nl</div><div class="t m0 x4 h3 y4 ff2 fs1 fc1 sc0 ls0 ws1">Database Logical</div><div class="t m0 x5 h3 y5 ff2 fs1 fc1 sc0 ls0">Design</div><a class="l" href="mailto:ti1506-ewi@tudelft.nl"><div class="d m1" style="border-style:none;position:absolute;left:352.375000px;bottom:199.875000px;width:319.250000px;height:38.000000px;background-color:rgba(255,255,255,0.000001);"></div></a></div></div>
 
 
@@ -238,7 +248,7 @@ to advance a slide -->
 
     <asq-option class="smaller" style="display:block;" name="a"><i>Reference</i> between <i>Standard</i> and <i>Implementation</i></asq-option>
     <asq-option class="smaller" style="display:block; margin-top: 10px;" name="b" correct><i>Reference</i> between <i>Language</i> and <i>Implementation</i></asq-option>
-    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="c">Example</asq-option>
+    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="c"><i>Example</i></asq-option>
     
     </asq-multi-choice-q>
   </asq-exercise>
@@ -277,10 +287,10 @@ to advance a slide -->
       </div>
       </asq-stem>
 
-    <asq-option class="smaller" style="display:block;" name="a" correct><i>The Material entity participates in the Example relationship with a partial participation constraint</i></asq-option>
-    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="b"><i>The Implementation entity includes 5 attributes, but only the Author attribute becomes optional because it is multivalued</i></asq-option>
-    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="c" correct><i>The Implementation entity features 6 attributes, but only 3 become optional</i></asq-option>
-    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="d"><i>The Example relationship changes its cardinality from N:N to 1:N because not all the instances from the Material entities will be related to an instance of the Implementation entity</i></asq-option>
+    <asq-option class="smaller" style="display:block;" name="a" correct>The <i>Material</i> entity participates in the <i>Example</i> relationship with a partial participation constraint</asq-option>
+    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="b">The <i>Implementation</i> entity includes 5 attributes, but only the <i>Author</i> attribute becomes optional because it is multivalued</asq-option>
+    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="c" correct>The <i>Implementation</i> entity features 6 attributes, but only 3 become optional</asq-option>
+    <asq-option class="smaller" style="display:block; margin-top: 10px;" name="d">The <i>Example</i> relationship changes its cardinality from N:N to 1:N because not all the instances from the <i>Material</i> entities will be related to an instance of the <i>Implementation</i> entity</asq-option>
     </asq-multi-choice-q>
   </asq-exercise>
 </div>
