@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="slides for Conceptual Database Design - Werkcollege for the course of Web- and Database Technology at the Delft University of Technology" />
+<meta name="author" content="Alessandro Bozzon, Vasileios Triglianos" />
+<title>Conceptual Database Design - Werkcollege</title>
+
+<link rel="stylesheet" href="css/ASQBasicImpress.css">
+<link rel="stylesheet" href="css/style.css"/>
+
+ <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> 
+  <!-- Use shadow dom -->
+  <script>
+    window.Polymer = window.Polymer || {};
+    window.Polymer.dom = 'shadow';
+  </script>
+
+  <link rel="import" href="bower_components/polymer/polymer.html"> 
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+  <link rel="import" href="bower_components/asq-elements/asq-elements.html">
+
+  <link href="bower_components/usi-web-atelier-slides-common/css/sunburst.css" rel="stylesheet">
+  <link rel="import" href="shared-styles.html">
+  <style is="custom-style" include="shared-styles"></style>
+
+
+</head>
+<body class="impress-not-supported">
+
+  <div class="fallback-message">
+    <p>
+      Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+    </p>
+    <p>
+      For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+    </p>
+  </div>
+
+  <asq-settings max-num-submissions="-1" slideflow="ctrl" assessment="none"></asq-settings>
+
+<div id="impress">
+
+
+<div id="announcements" class="step text-center" data-x="0" data-scale="0.4" data-rotate="0">
+  <h1>Werkcollege - ER Exercises</h1>
+  <div><strong>Alessandro Bozzon</strong></div>
+  <div>TI1506: Web and Database Technology</div>
+  <div><a href="mailto:ti1506-ewi@tudelft.nl"><strong>ti1506-ewi@tudelft.nl</strong></a></div>
+  <ul class="small text-left">
+    <li> Please use Google Chrome <img src="img/chrome_icon.svg" style="position: relative; top: 10px; height: 50px;" alt="chrome icon"> on a PC</li>
+    <hr>
+    <asq-welcome></asq-welcome>
+  </ul>
+</div>
+
+<div id="asq-1" class="step break" data-x="800" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise>
+  <asq-stem class="smaller"><h1>Ex.1</h1></asq-stem>
+  <asq-highlight-q theme="" mode="text" font-size="0.55em">
+    <asq-solution></asq-solution>
+    <asq-stem class="small"><p class="smaller">Although you always wanted to be an artist, you ended up being an expert on databases because you love to cook data and you somehow confused database with data baste. Your old love is still there, however, so you set up a database company, ArtBase, that builds a product for art galleries. The core of this product is a database with a schema that captures all the information that galleries need to maintain.</p>
+     <div style="clear:both; float:none;">Highlight the appropriate ER components</div>
+    </asq-stem>
+    <asq-hl-color-task class="small" style="float:left;" color="ffd700" colorName="ffd700">Entities</asq-hl-color-task>
+    <asq-hl-color-task class="small" style="float:left;" color="5cb85c" colorName="5cb85c">Relationships</asq-hl-color-task>
+    <asq-hl-color-task class="small" style="float:left;" color="428bca" colorName="428bca">Attributes</asq-hl-color-task>
+     <asq-hl-color-task class="small" style="float:left;" color="d9534f" colorName="d9534f">Identifiers</asq-hl-color-task>
+    <div style="clear:both; float:none;"></div>
+<code>Galleries keep information about artists, their names
+(which are unique), birthplaces, age,and style of art. For
+each piece of artwork, the artist, the year it was made,
+its unique title, its type of art (e.g., painting, lithograph,
+sculpture, photograph), and its price must be stored. Pieces
+of artwork are also classified into groups of various kinds,
+for example, portraits, still lifes, works by Picasso, or
+works of the 19th century; a given piece may belong to more
+than one group.
+
+Each group is identified by a name (like those just given)
+that describes the group. Finally, galleries keep information
+about customers. For each customer, galleries keep that
+person’s unique name, address, total amount of dollars spent
+in the gallery (very important!), and the artists and groups
+of art that the customer tends to like.</code>
+  </asq-highlight-q>
+</asq-exercise>
+</div>
+
+<div id="asq-2" class="step break" data-x="1600" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise>
+  <asq-stem class="smaller"><h1>Ex.2</h1></asq-stem>
+  <asq-highlight-q theme="" mode="text" font-size="0.55em">
+    <asq-solution></asq-solution>
+    <asq-stem class="small"><p class="small">You have just moved to Washington, D.C., to work for the U.S. House of Representatives (the “House”) as a database specialist. For your first job, they want you to design a database to keep track of votes taken in the House.
+The database will track votes taken in the House during the current two-year congressional session.</p>
+     <div style="clear:both; float:none;">Highlight the appropriate ER components</div>
+    </asq-stem>
+    <asq-hl-color-task class="small" style="float:left;" color="ffd700" colorName="ffd700">Entities</asq-hl-color-task>
+    <asq-hl-color-task class="small" style="float:left;" color="5cb85c" colorName="5cb85c">Relationships</asq-hl-color-task>
+    <asq-hl-color-task class="small" style="float:left;" color="428bca" colorName="428bca">Attributes</asq-hl-color-task>
+     <asq-hl-color-task class="small" style="float:left;" color="d9534f" colorName="d9534f">Identifiers</asq-hl-color-task>
+    <div style="clear:both; float:none;"></div>
+<code> It should record each U.S. state (for instance, Texas)
+with its name, number of representatives, and region in which
+the state is located (northeast, mid-atlantic, midwest, and so
+forth). Each representative, in the House is to be described
+by his or her name, the district (by district number) that he
+or she represents, the year when he or she was first elected,
+and the political party to which he or she belongs (for
+instance, Republican, Democrat, Independent, Green, Reform,
+Other).
+
+The database should track each bill (legislation) with its 
+name, the date on which its vote was taken, whether the bill
+passed or failed (so the domain is yes and no), and its
+sponsors (the representatives who proposed the bill).
+The database should track how each representative voted on
+each bill (yes, no, abstain, absent).</code>
+  </asq-highlight-q>
+</asq-exercise>
+</div>
+
+<div id="asq-3" class="step break" data-x="2400" data-scale="0.4" data-rotate="0" data-timer="300">
+<asq-exercise>
+  <asq-stem class="smaller"><h1>Ex.3</h1></asq-stem>
+  <asq-highlight-q theme="" mode="text" font-size="0.55em">
+    <asq-solution></asq-solution>
+    <asq-stem class="small"><p class="small">Consider a company in the business of public transportation bus service. </p>
+     <div style="clear:both; float:none;">Highlight the appropriate ER components</div>
+    </asq-stem>
+    <asq-hl-color-task class="small" style="float:left;" color="ffd700" colorName="ffd700">Entities</asq-hl-color-task>
+    <asq-hl-color-task class="small" style="float:left;" color="5cb85c" colorName="5cb85c">Relationships</asq-hl-color-task>
+    <asq-hl-color-task class="small" style="float:left;" color="428bca" colorName="428bca">Attributes</asq-hl-color-task>
+     <asq-hl-color-task class="small" style="float:left;" color="d9534f" colorName="d9534f">Identifiers</asq-hl-color-task>
+    <div style="clear:both; float:none;"></div>
+<code>The company owns a number of buses, of different types
+(e.g. double decker, articulated, urban, etc.). Each bus is
+used on different routes.
+
+The workforce of the company is composed by drivers, 
+controllers (operating on some journeys), ticket sellers 
+working in some bus stops), maintenance and administrative
+workers, operating from the company's headquarter. 
+
+For each worker it is required to keep track of his/her
+demographic information. For each route, the system must
+store information about the starting and ending locations,
+as well as all the intermediate stops. Buses are stored at
+night in a depot (garage).
+
+Each bus is associated to a unique depot. Each drives is 
+assigned to a depot, and his/her first and last journey must
+be performed on buses associated to the same depot. Other
+journeys during the day might be performed on buses associated
+to other depots. </code>
+  </asq-highlight-q>
+</asq-exercise>
+</div>
+
+<div id="survey" class="step" data-x="3200" data-scale="0.4">
+  <h1>Survey</h1>
+  <p>Please fill in this survey to give us feedback about ASQ (won't take more than 5 minutes)</p>
+  <div style="text-align:center;">
+     <a href="http://goo.gl/forms/KTw5e5GgVU" target="_blank">http://goo.gl/forms/KTw5e5GgVU</a><br><br>
+     Thank you!
+  </div>  
+</div>
+ 
+
+</div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/asq-impress-js/js/impress.js"></script>
+  <script src="bower_components/usi-web-atelier-slides-common/js/highlight.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="bower_components/impress-step-timer/impress-step-timer.js"></script>
+  <script src="js/display-asq-solutions.js"></script>
+</body>
+</html>
